@@ -3,26 +3,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ScrollbarPage extends StatelessWidget {
-  final _documentUrl =
-      'https://api.flutter.dev/flutter/material/Scrollbar-class.html';
-  final _videoUrl = 'https://www.youtube.com/watch?v=DbkIQSvwnZc';
-  final _colorList = [
-    Colors.amber,
-    Colors.amberAccent,
-    Colors.blue,
-    Colors.blueAccent,
-    Colors.blueGrey,
-    Colors.brown,
-    Colors.cyan,
-    Colors.indigo,
-    Colors.red,
-    Colors.redAccent,
-    Colors.teal,
-    Colors.tealAccent,
-    Colors.white,
-    Colors.yellow,
-    Colors.yellowAccent,
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,6 +53,27 @@ class ScrollbarPage extends StatelessWidget {
       ),
     );
   }
+
+  final _documentUrl =
+      'https://api.flutter.dev/flutter/material/Scrollbar-class.html';
+  final _videoUrl = 'https://www.youtube.com/watch?v=DbkIQSvwnZc';
+  final _colorList = [
+    Colors.amber,
+    Colors.amberAccent,
+    Colors.blue,
+    Colors.blueAccent,
+    Colors.blueGrey,
+    Colors.brown,
+    Colors.cyan,
+    Colors.indigo,
+    Colors.red,
+    Colors.redAccent,
+    Colors.teal,
+    Colors.tealAccent,
+    Colors.white,
+    Colors.yellow,
+    Colors.yellowAccent,
+  ];
 
   void _launchURL(String _url) async => await canLaunch(_url)
       ? await launch(_url)
