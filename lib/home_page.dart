@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proximity/app/expansion_panel/expansion_panel_page.dart';
 
 import 'app/scrollbar/scrollbar_page.dart';
 
@@ -11,7 +12,18 @@ class HomePage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          _Card(),
+          _Card(
+            page: ScrollbarPage(),
+            title: 'Scrollbar',
+            text: 'A Material Design scrollbar.',
+            chipList: ['null safety', 'video', 'widget'],
+          ),
+          _Card(
+            page: ExpansionPanelPage(),
+            title: 'ExpansionPanel',
+            text: 'A material expansion panel.',
+            chipList: ['null safety', 'video', 'widget'],
+          ),
         ],
       ),
     );
@@ -19,6 +31,14 @@ class HomePage extends StatelessWidget {
 }
 
 class _Card extends StatelessWidget {
+  const _Card({Key key, this.page, this.title, this.text, this.chipList})
+      : super(key: key);
+
+  final Widget page;
+  final String title;
+  final String text;
+  final List<String> chipList;
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -26,7 +46,7 @@ class _Card extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => ScrollbarPage(),
+            builder: (_) => page,
           ),
         );
       },
@@ -35,27 +55,21 @@ class _Card extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            const ListTile(
-              title: Text('Scrollbar'),
-              subtitle: Text('A Material Design scrollbar.'),
+            ListTile(
+              title: Text(title),
+              subtitle: Text(text),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                Chip(
-                  elevation: 2,
-                  label: Text('null safety'),
-                ),
-                const SizedBox(width: 8),
-                Chip(
-                  elevation: 2,
-                  label: Text('video'),
-                ),
-                const SizedBox(width: 8),
-                Chip(
-                  elevation: 2,
-                  label: Text('widget'),
-                ),
+                for (int i = 0; i < chipList.length; i++)
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Chip(
+                      elevation: 2,
+                      label: Text(chipList[i]),
+                    ),
+                  ),
               ],
             ),
           ],
