@@ -31,13 +31,13 @@ class HomePage extends StatelessWidget {
 }
 
 class _Card extends StatelessWidget {
-  const _Card({Key key, this.page, this.title, this.text, this.chipList})
+  const _Card({Key? key, this.page, this.title, this.text, this.chipList})
       : super(key: key);
 
-  final Widget page;
-  final String title;
-  final String text;
-  final List<String> chipList;
+  final Widget? page;
+  final String? title;
+  final String? text;
+  final List<String>? chipList;
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class _Card extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (_) => page,
+            builder: (_) => page!,
           ),
         );
       },
@@ -56,18 +56,18 @@ class _Card extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             ListTile(
-              title: Text(title),
-              subtitle: Text(text),
+              title: Text(title!),
+              subtitle: Text(text!),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                for (int i = 0; i < chipList.length; i++)
+                for (int i = 0; i < chipList!.length; i++)
                   Padding(
                     padding: const EdgeInsets.only(left: 8.0),
                     child: Chip(
                       elevation: 2,
-                      label: Text(chipList[i]),
+                      label: Text(chipList![i]),
                     ),
                   ),
               ],

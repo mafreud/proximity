@@ -4,8 +4,8 @@ import 'package:url_launcher/url_launcher.dart';
 
 class Item {
   Item({
-    @required this.expandedValue,
-    @required this.headerValue,
+    required this.expandedValue,
+    required this.headerValue,
     this.isExpanded = false,
   });
 
