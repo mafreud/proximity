@@ -18,14 +18,14 @@ class HomePage extends StatelessWidget {
             title: 'Scrollbar',
             text: 'A Material Design scrollbar.',
             chipList: ['null safety', 'video', 'widget'],
-            gif: 'assets/gif/animated_physical_model.gif',
+            gif: 'assets/gif/scrollbar.gif',
           ),
           _Card(
             page: ExpansionPanelPage(),
             title: 'ExpansionPanel',
             text: 'A material expansion panel.',
             chipList: ['null safety', 'video', 'widget'],
-            gif: 'assets/gif/animated_physical_model.gif',
+            gif: 'assets/gif/expansion_panel.gif',
           ),
           _Card(
             page: PhysicalModelPage(),

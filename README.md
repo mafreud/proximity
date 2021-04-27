@@ -11,3 +11,4 @@ Flutter widgets you haven't used yet.
 ## Coming soon
 
 - Curves
+- Switch

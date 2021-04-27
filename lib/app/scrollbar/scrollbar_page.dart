@@ -28,6 +28,7 @@ class ScrollbarPage extends StatelessWidget {
         ],
       ),
       body: Scrollbar(
+        thickness: 10,
         child: ListView.builder(
           itemCount: _colorList.length,
           itemBuilder: (context, index) {
