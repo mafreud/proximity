@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proximity/app/expansion_panel/expansion_panel_page.dart';
+import 'package:proximity/app/physical_model/physical_model.dart';
 
 import 'app/scrollbar/scrollbar_page.dart';
 
@@ -17,12 +18,22 @@ class HomePage extends StatelessWidget {
             title: 'Scrollbar',
             text: 'A Material Design scrollbar.',
             chipList: ['null safety', 'video', 'widget'],
+            gif: 'assets/gif/animated_physical_model.gif',
           ),
           _Card(
             page: ExpansionPanelPage(),
             title: 'ExpansionPanel',
             text: 'A material expansion panel.',
             chipList: ['null safety', 'video', 'widget'],
+            gif: 'assets/gif/animated_physical_model.gif',
+          ),
+          _Card(
+            page: PhysicalModelPage(),
+            title: 'PhysicalModel',
+            text:
+                'A widget representing a physical layer that clips its children to a shape.',
+            chipList: ['null safety', 'video', 'widget'],
+            gif: 'assets/gif/animated_physical_model.gif',
           ),
         ],
       ),
@@ -31,13 +42,20 @@ class HomePage extends StatelessWidget {
 }
 
 class _Card extends StatelessWidget {
-  const _Card({Key? key, this.page, this.title, this.text, this.chipList})
-      : super(key: key);
+  const _Card({
+    Key? key,
+    this.page,
+    this.title,
+    this.text,
+    this.chipList,
+    this.gif,
+  }) : super(key: key);
 
   final Widget? page;
   final String? title;
   final String? text;
   final List<String>? chipList;
+  final String? gif;
 
   @override
   Widget build(BuildContext context) {
@@ -56,6 +74,8 @@ class _Card extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             ListTile(
+              minVerticalPadding: 10,
+              leading: Image.asset(gif!),
               title: Text(title!),
               subtitle: Text(text!),
             ),
