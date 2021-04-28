@@ -31,6 +31,7 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 - InteractiveViewer
 - Curves
 - Switch
+- Navigator
 
 ## Future Feature
 - Full-text search
