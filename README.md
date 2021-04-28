@@ -16,14 +16,13 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 
 ## Widgets that you can touch and feel
-
+- RotatedBox ✨
 - Scrollbar
 - ExpansionPanel
 - PhysicalModel
 
 ## Coming soon
 - AnimatedWidget
-- RotatedBox
 - ToggleButtons
 - SwitchListTile
 - AnimatedIcon
