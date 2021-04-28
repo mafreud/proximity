@@ -15,7 +15,13 @@ Flutter widgets you haven't used yet.
 - PhysicalModel
 
 ## Coming soon
-
+- AnimatedWidget
+- RotatedBox
+- ToggleButtons
+- SwitchListTile
+- AnimatedIcon
+- SafeArea
+- InteractiveViewer
 - Curves
 - Switch
 
