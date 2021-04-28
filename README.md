@@ -28,3 +28,4 @@ Flutter widgets you haven't used yet.
 ## Future Feature
 - Full-text search
 - FCM
+- upload proximity to appstore and playstore
