@@ -11,7 +11,7 @@ Flutter widgets you haven't used yet.
 ## Problems that proximity solves
 Currently, Flutter has a lot of useful pre-built widgets, no, too many widgets.  
 Thus, it is not easy to know all widgets and how each widgets work and behave.  
-Proximity solves this problem. It enables users to touch and feel widgets so that they can learn understand them effectively.
+Proximity solves this problem. It enables users to touch and feel widgets so that they can learn them effectively.
 
 
 
