@@ -25,3 +25,6 @@ Flutter widgets you haven't used yet.
 - Curves
 - Switch
 
+## Future Feature
+- Full-text search
+- FCM
