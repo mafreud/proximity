@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:proximity/app/expansion_panel/expansion_panel_page.dart';
 import 'package:proximity/app/physical_model/physical_model.dart';
+import 'package:proximity/app/rotated_box/rotated_box.dart';
 
 import 'app/scrollbar/scrollbar_page.dart';
 
@@ -13,6 +14,14 @@ class HomePage extends StatelessWidget {
       ),
       body: Column(
         children: [
+          _Card(
+            page: RotatedBoxPage(),
+            title: 'RotatedBox',
+            text:
+                'A widget that rotates its child by a integral number of quarter turns.',
+            chipList: ['null safety', 'video', 'widget'],
+            gif: 'assets/gif/rotated_box.gif',
+          ),
           _Card(
             page: ScrollbarPage(),
             title: 'Scrollbar',
