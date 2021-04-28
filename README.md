@@ -22,6 +22,7 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 - PhysicalModel
 
 ## Coming soon
+### Widget
 - AnimatedWidget
 - ToggleButtons
 - SwitchListTile
@@ -31,6 +32,8 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 - Curves
 - Switch
 - Navigator
+
+### Package
 
 ## Future Feature
 - Full-text search
