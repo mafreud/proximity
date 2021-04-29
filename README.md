@@ -16,14 +16,14 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 
 ## Widgets that you can touch and feel
-
+- RotatedBox ✨
 - Scrollbar
 - ExpansionPanel
 - PhysicalModel
 
 ## Coming soon
+### Widget
 - AnimatedWidget
-- RotatedBox
 - ToggleButtons
 - SwitchListTile
 - AnimatedIcon
@@ -32,6 +32,9 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 - Curves
 - Switch
 - Navigator
+
+### Package
+- flutter_slidable
 
 ## Future Feature
 - Full-text search
