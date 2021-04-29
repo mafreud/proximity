@@ -1,10 +1,7 @@
-
-
-
 # proximity
+<img src="https://user-images.githubusercontent.com/28733986/116554772-88992c80-a936-11eb-9995-2a72d7852520.png" width="300" height="300">
 
 Flutter widgets you haven't used yet.  
-  
   
 ![55dbc10639d0f23b9cf7c0e7d8c6765e](https://user-images.githubusercontent.com/28733986/116259353-b05e8800-a7b0-11eb-8a50-a1cb05ebcb39.gif)
 
