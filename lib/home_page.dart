@@ -3,6 +3,7 @@ import 'package:proximity/app/animated_switcher/animated_switcher.dart';
 import 'package:proximity/app/expansion_panel/expansion_panel_page.dart';
 import 'package:proximity/app/physical_model/physical_model.dart';
 import 'package:proximity/app/rotated_box/rotated_box.dart';
+import 'package:proximity/app/sliver/sliver_page.dart';
 
 import 'app/scrollbar/scrollbar_page.dart';
 
@@ -51,6 +52,14 @@ class HomePage extends StatelessWidget {
                 'A widget representing a physical layer that clips its children to a shape.',
             chipList: ['null safety', 'video', 'widget'],
             gif: 'assets/gif/animated_physical_model.gif',
+          ),
+          _Card(
+            page: SliverPage(),
+            title: 'Sliver',
+            text:
+            'A sliver is a portion of a scrollable area that you can define to behave in a special way.',
+            chipList: ['null safety', 'video', 'widget'],
+            gif: 'assets/gif/sliver.gif',
           ),
         ],
       ),
