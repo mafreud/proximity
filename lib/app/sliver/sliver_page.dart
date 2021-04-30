@@ -67,7 +67,6 @@ class SliverPage extends StatelessWidget {
                   childCount: 20
               ),
             ),
-
           ],
         )
     );
