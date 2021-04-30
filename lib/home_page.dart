@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proximity/app/animated_switcher/animated_switcher.dart';
 import 'package:proximity/app/expansion_panel/expansion_panel_page.dart';
 import 'package:proximity/app/physical_model/physical_model.dart';
 import 'package:proximity/app/rotated_box/rotated_box.dart';
@@ -14,6 +15,13 @@ class HomePage extends StatelessWidget {
       ),
       body: Column(
         children: [
+          _Card(
+            page: AnimatedSwitcherPage(),
+            title: 'AnimatedSwitcher',
+            text: 'Animated cross-fade between 2 widgets.',
+            chipList: ['null safety', 'video', 'widget'],
+            gif: 'assets/gif/animated_switcher.gif',
+          ),
           _Card(
             page: RotatedBoxPage(),
             title: 'RotatedBox',
