@@ -46,4 +46,3 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 - Full-text search
 - FCM
-- upload proximity to appstore and playstore
