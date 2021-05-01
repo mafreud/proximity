@@ -27,6 +27,7 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 ## Coming soon
 
 ### Widget
+- IndexedStack
 - Flow
 - AnimatedWidget
 - ToggleButtons
