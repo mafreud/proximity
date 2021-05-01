@@ -5,6 +5,7 @@ import 'package:proximity/app/physical_model/physical_model.dart';
 import 'package:proximity/app/rotated_box/rotated_box.dart';
 
 import 'app/scrollbar/scrollbar_page.dart';
+import 'app/switch_list_tile/switch_list_tile_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -16,6 +17,14 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            _Card(
+              page: SwitchListTilePage(),
+              title: 'SwitchListTile',
+              text:
+                  'A ListTile with a Switch. In other words, a switch with a label.',
+              chipList: ['null safety', 'video', 'widget'],
+              gif: 'assets/gif/switch_list_tile.gif',
+            ),
             _Card(
               page: AnimatedSwitcherPage(),
               title: 'AnimatedSwitcher',
