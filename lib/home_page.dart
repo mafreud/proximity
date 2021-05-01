@@ -6,6 +6,7 @@ import 'package:proximity/app/rotated_box/rotated_box.dart';
 
 import 'app/scrollbar/scrollbar_page.dart';
 import 'app/switch_list_tile/switch_list_tile_page.dart';
+import 'app/table/table_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -17,6 +18,14 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            _Card(
+              page: TablePage(),
+              title: 'Table',
+              text:
+                  'A widget that uses the table layout algorithm for its children.',
+              chipList: ['null safety', 'video', 'widget'],
+              gif: 'assets/gif/table.gif',
+            ),
             _Card(
               page: SwitchListTilePage(),
               title: 'SwitchListTile',
