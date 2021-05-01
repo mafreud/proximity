@@ -13,46 +13,48 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('proximity'),
       ),
-      body: Column(
-        children: [
-          _Card(
-            page: AnimatedSwitcherPage(),
-            title: 'AnimatedSwitcher',
-            text: 'Animated cross-fade between 2 widgets.',
-            chipList: ['null safety', 'video', 'widget'],
-            gif: 'assets/gif/animated_switcher.gif',
-          ),
-          _Card(
-            page: RotatedBoxPage(),
-            title: 'RotatedBox',
-            text:
-                'A widget that rotates its child by a integral number of quarter turns.',
-            chipList: ['null safety', 'video', 'widget'],
-            gif: 'assets/gif/rotated_box.gif',
-          ),
-          _Card(
-            page: ScrollbarPage(),
-            title: 'Scrollbar',
-            text: 'A Material Design scrollbar.',
-            chipList: ['null safety', 'video', 'widget'],
-            gif: 'assets/gif/scrollbar.gif',
-          ),
-          _Card(
-            page: ExpansionPanelPage(),
-            title: 'ExpansionPanel',
-            text: 'A material expansion panel.',
-            chipList: ['null safety', 'video', 'widget'],
-            gif: 'assets/gif/expansion_panel.gif',
-          ),
-          _Card(
-            page: PhysicalModelPage(),
-            title: 'PhysicalModel',
-            text:
-                'A widget representing a physical layer that clips its children to a shape.',
-            chipList: ['null safety', 'video', 'widget'],
-            gif: 'assets/gif/animated_physical_model.gif',
-          ),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            _Card(
+              page: AnimatedSwitcherPage(),
+              title: 'AnimatedSwitcher',
+              text: 'Animated cross-fade between 2 widgets.',
+              chipList: ['null safety', 'video', 'widget'],
+              gif: 'assets/gif/animated_switcher.gif',
+            ),
+            _Card(
+              page: RotatedBoxPage(),
+              title: 'RotatedBox',
+              text:
+                  'A widget that rotates its child by a integral number of quarter turns.',
+              chipList: ['null safety', 'video', 'widget'],
+              gif: 'assets/gif/rotated_box.gif',
+            ),
+            _Card(
+              page: ScrollbarPage(),
+              title: 'Scrollbar',
+              text: 'A Material Design scrollbar.',
+              chipList: ['null safety', 'video', 'widget'],
+              gif: 'assets/gif/scrollbar.gif',
+            ),
+            _Card(
+              page: ExpansionPanelPage(),
+              title: 'ExpansionPanel',
+              text: 'A material expansion panel.',
+              chipList: ['null safety', 'video', 'widget'],
+              gif: 'assets/gif/expansion_panel.gif',
+            ),
+            _Card(
+              page: PhysicalModelPage(),
+              title: 'PhysicalModel',
+              text:
+                  'A widget representing a physical layer that clips its children to a shape.',
+              chipList: ['null safety', 'video', 'widget'],
+              gif: 'assets/gif/animated_physical_model.gif',
+            ),
+          ],
+        ),
       ),
     );
   }
