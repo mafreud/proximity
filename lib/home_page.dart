@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
               text:
               'A sliver is a portion of a scrollable area that you can define to behave in a special way.',
               chipList: ['null safety', 'video', 'widget'],
-              gif: 'assets/gif/sliver.gif',
+              gif: 'assets/gif/sliver_app_bar.gif',
             ),
             _Card(
               page: SliverListAndSliverGridViewPage(),
@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
               text:
               'A sliver is a portion of a scrollable area that you can define to behave in a special way.',
               chipList: ['null safety', 'video', 'widget'],
-              gif: 'assets/gif/sliver.gif',
+              gif: 'assets/gif/sliver_list_and_sliver_grid_view.gif',
             ),
             _Card(
               page: SearchDelegatePage(),
