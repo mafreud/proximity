@@ -95,7 +95,7 @@ class Search extends SearchDelegate {
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    List<String> suggestionList = [];
+    var suggestionList = [];
     query.isEmpty
         ? suggestionList = recentList
         : suggestionList.addAll(
