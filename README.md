@@ -2,6 +2,8 @@
 
 Flutter widgets you haven't used yet.
 
+<a href='https://play.google.com/store/apps/details?id=com.flutterproximity&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'  height="130"/></a>
+
 ## Problems that proximity solves
 
 Currently, Flutter has a lot of useful pre-built widgets, no, too many widgets.  
@@ -14,6 +16,9 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 ## Widgets that you can touch and feel
 
+- SearchDelegate ✨
+- Table ✨
+- SwitchListTile ✨
 - AnimatedSwitcher ✨
 - RotatedBox ✨
 - Scrollbar
@@ -24,10 +29,10 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 ## Coming soon
 
 ### Widget
-
+- IndexedStack
+- Flow
 - AnimatedWidget
 - ToggleButtons
-- SwitchListTile
 - AnimatedIcon
 - SafeArea
 - InteractiveViewer
@@ -43,4 +48,3 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 - Full-text search
 - FCM
-- upload proximity to appstore and playstore

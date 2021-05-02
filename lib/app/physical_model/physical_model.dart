@@ -35,69 +35,71 @@ class _PhysicalModelPageState extends State<PhysicalModelPage> {
         ],
       ),
       body: Center(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20),
-              child: Text(
-                'PhysicalModel',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20),
+                child: Text(
+                  'PhysicalModel',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
               ),
-            ),
-            PhysicalModel(
-              child: Container(
-                color: Colors.teal,
-                height: 200,
-                width: 200,
+              PhysicalModel(
+                color: Colors.amber,
+                shadowColor: Colors.black,
+                elevation: isSwitched ? 50 : 0,
+                child: Container(
+                  color: Colors.teal,
+                  height: 200,
+                  width: 200,
+                ),
               ),
-              color: Colors.amber,
-              shadowColor: Colors.black,
-              elevation: isSwitched ? 50 : 0,
-            ),
-            Switch(
-              value: isSwitched,
-              onChanged: (value) {
-                setState(() {
-                  isSwitched = value;
-                });
-              },
-              activeTrackColor: Colors.white,
-              activeColor: Colors.teal,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Text(
-                'AnimatedPhysicalModel',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              Switch(
+                value: isSwitched,
+                onChanged: (value) {
+                  setState(() {
+                    isSwitched = value;
+                  });
+                },
+                activeTrackColor: Colors.white,
+                activeColor: Colors.teal,
               ),
-            ),
-            AnimatedPhysicalModel(
-              duration: const Duration(milliseconds: 500),
-              curve: Curves.fastOutSlowIn,
-              shape: BoxShape.rectangle,
-              child: Container(
-                color: Colors.teal,
-                height: 200,
-                width: 200,
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Text(
+                  'AnimatedPhysicalModel',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
               ),
-              borderRadius: isAnimatedSwitched
-                  ? const BorderRadius.all(Radius.circular(0))
-                  : const BorderRadius.all(Radius.circular(10)),
-              color: Colors.amber,
-              shadowColor: Colors.black,
-              elevation: isAnimatedSwitched ? 50 : 0,
-            ),
-            Switch(
-              value: isAnimatedSwitched,
-              onChanged: (value) {
-                setState(() {
-                  isAnimatedSwitched = value;
-                });
-              },
-              activeTrackColor: Colors.white,
-              activeColor: Colors.teal,
-            )
-          ],
+              AnimatedPhysicalModel(
+                duration: const Duration(milliseconds: 500),
+                curve: Curves.fastOutSlowIn,
+                shape: BoxShape.rectangle,
+                borderRadius: isAnimatedSwitched
+                    ? const BorderRadius.all(Radius.circular(0))
+                    : const BorderRadius.all(Radius.circular(10)),
+                color: Colors.amber,
+                shadowColor: Colors.black,
+                elevation: isAnimatedSwitched ? 50 : 0,
+                child: Container(
+                  color: Colors.teal,
+                  height: 200,
+                  width: 200,
+                ),
+              ),
+              Switch(
+                value: isAnimatedSwitched,
+                onChanged: (value) {
+                  setState(() {
+                    isAnimatedSwitched = value;
+                  });
+                },
+                activeTrackColor: Colors.white,
+                activeColor: Colors.teal,
+              )
+            ],
+          ),
         ),
       ),
     );
