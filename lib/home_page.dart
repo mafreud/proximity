@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -22,13 +24,15 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ListTileCard(
-              page: AlgoliaPage(),
-              title: 'Algolia',
-              text: 'full-text search, typo tolerant',
-              chipList: ['null safety', 'plugin'],
-              gif: 'assets/gif/algolia.gif',
-            ),
+            Platform.isIOS
+                ? ListTileCard(
+                    page: AlgoliaPage(),
+                    title: 'Algolia',
+                    text: 'full-text search, typo tolerant',
+                    chipList: ['null safety', 'plugin'],
+                    gif: 'assets/gif/algolia.gif',
+                  )
+                : SizedBox(),
             ListTileCard(
               page: SearchDelegatePage(),
               title: 'Search',
