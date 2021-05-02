@@ -40,6 +40,10 @@ class _AnimatedSwitcherPageState extends State<AnimatedSwitcherPage> {
           children: [
             AnimatedSwitcher(
               duration: const Duration(milliseconds: 300),
+              transitionBuilder: (widget, animation) => ScaleTransition(
+                scale: animation,
+                child: widget,
+              ),
               child: isFirst
                   ? Container(
                       decoration: BoxDecoration(
@@ -59,10 +63,6 @@ class _AnimatedSwitcherPageState extends State<AnimatedSwitcherPage> {
                       width: 200,
                       height: 100,
                     ),
-              transitionBuilder: (widget, animation) => ScaleTransition(
-                scale: animation,
-                child: widget,
-              ),
             ),
           ],
         ),
