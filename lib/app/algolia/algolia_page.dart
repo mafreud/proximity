@@ -46,19 +46,6 @@ class _AlgoliaPageState extends State<AlgoliaPage> {
               controller: _controller,
               decoration: InputDecoration(hintText: 'Search query here...'),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                // FlatButton(
-                //   color: Colors.blue,
-                //   child: Text(
-                //     "Search",
-                //     style: TextStyle(color: Colors.white),
-                //   ),
-                //   onPressed: _search,
-                // ),
-              ],
-            ),
             SizedBox(height: 10),
             Expanded(
               child: _searching == true
