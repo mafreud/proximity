@@ -46,14 +46,14 @@ class _PhysicalModelPageState extends State<PhysicalModelPage> {
                 ),
               ),
               PhysicalModel(
+                color: Colors.amber,
+                shadowColor: Colors.black,
+                elevation: isSwitched ? 50 : 0,
                 child: Container(
                   color: Colors.teal,
                   height: 200,
                   width: 200,
                 ),
-                color: Colors.amber,
-                shadowColor: Colors.black,
-                elevation: isSwitched ? 50 : 0,
               ),
               Switch(
                 value: isSwitched,
@@ -76,17 +76,17 @@ class _PhysicalModelPageState extends State<PhysicalModelPage> {
                 duration: const Duration(milliseconds: 500),
                 curve: Curves.fastOutSlowIn,
                 shape: BoxShape.rectangle,
-                child: Container(
-                  color: Colors.teal,
-                  height: 200,
-                  width: 200,
-                ),
                 borderRadius: isAnimatedSwitched
                     ? const BorderRadius.all(Radius.circular(0))
                     : const BorderRadius.all(Radius.circular(10)),
                 color: Colors.amber,
                 shadowColor: Colors.black,
                 elevation: isAnimatedSwitched ? 50 : 0,
+                child: Container(
+                  color: Colors.teal,
+                  height: 200,
+                  width: 200,
+                ),
               ),
               Switch(
                 value: isAnimatedSwitched,

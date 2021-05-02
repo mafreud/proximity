@@ -43,14 +43,15 @@ class _RotatedBoxPageState extends State<RotatedBoxPage> {
                 RotatedBox(
                   quarterTurns: quarterTurns,
                   child: Container(
-                    child: Center(
-                        child: Text(
-                      'Proximity',
-                      style: TextStyle(fontSize: 30),
-                    )),
                     color: Colors.teal,
                     height: 100,
                     width: 300,
+                    child: Center(
+                      child: Text(
+                        'Proximity',
+                        style: TextStyle(fontSize: 30),
+                      ),
+                    ),
                   ),
                 ),
                 Expanded(
