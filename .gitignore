@@ -23,6 +23,7 @@
 # Flutter/Dart/Pub related
 **/doc/api/
 **/ios/Flutter/.last_build_id
+**/lib/app/algolia/algolia_init.dart
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
