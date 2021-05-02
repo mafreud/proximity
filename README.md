@@ -16,6 +16,7 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 ## Widgets that you can touch and feel
 
+- SearchDelegate ✨
 - Table ✨
 - SwitchListTile ✨
 - AnimatedSwitcher ✨

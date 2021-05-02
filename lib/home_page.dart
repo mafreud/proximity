@@ -5,6 +5,7 @@ import 'package:proximity/app/physical_model/physical_model.dart';
 import 'package:proximity/app/rotated_box/rotated_box.dart';
 
 import 'app/scrollbar/scrollbar_page.dart';
+import 'app/search_delegate/search_delegate_page.dart';
 import 'app/switch_list_tile/switch_list_tile_page.dart';
 import 'app/table/table_page.dart';
 
@@ -18,6 +19,13 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            _Card(
+              page: SearchDelegatePage(),
+              title: 'Search',
+              text: 'Text search in Flutter',
+              chipList: ['null safety', 'video'],
+              gif: 'assets/gif/search_delegate.gif',
+            ),
             _Card(
               page: TablePage(),
               title: 'Table',
