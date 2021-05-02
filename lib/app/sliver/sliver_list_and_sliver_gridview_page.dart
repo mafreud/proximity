@@ -2,43 +2,33 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class SliverPage extends StatelessWidget {
+class SliverListAndSliverGridViewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: Text('SliverListAndSliverGridView'),
+          actions: [
+            IconButton(
+                icon: Icon(
+                  FontAwesomeIcons.youtube,
+                  color: Colors.red,
+                ),
+                onPressed: () {
+                  _launchURL(_videoUrl);
+                }),
+            IconButton(
+              icon: Icon(
+                FontAwesomeIcons.bookOpen,
+              ),
+              onPressed: () {
+                _launchURL(_documentUrl);
+              },
+            ),
+          ],
+        ),
         body: CustomScrollView(
           slivers: [
-            SliverAppBar(
-              expandedHeight: 200.0,
-              floating: false,
-              pinned: true,
-              title: Text('Sliver'),
-              actions: [
-                IconButton(
-                    icon: Icon(
-                      FontAwesomeIcons.youtube,
-                      color: Colors.red,
-                    ),
-                    onPressed: () {
-                      _launchURL(_videoUrl);
-                    }),
-                IconButton(
-                  icon: Icon(
-                    FontAwesomeIcons.bookOpen,
-                  ),
-                  onPressed: () {
-                    _launchURL(_documentUrl);
-                  },
-                ),
-              ],
-              flexibleSpace: FlexibleSpaceBar(
-                centerTitle: true,
-                title: Text('SliverAppBar'),
-                background: Container(
-                  color: Colors.blue,
-                ),
-              ),
-            ),
             SliverGrid(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 5,
@@ -49,15 +39,6 @@ class SliverPage extends StatelessWidget {
                 );
               },
                 childCount: 20,
-              ),
-            ),
-            SliverToBoxAdapter(
-              child: Container(
-                height: 100,
-                color: Colors.teal,
-                child: Center(
-                  child: Text('Proximity'),
-                ),
               ),
             ),
             SliverList(
