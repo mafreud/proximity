@@ -19,6 +19,9 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 ## Widgets that you can touch and feel
 
+- Sliver ✨
+  - SliverAppBar
+  - SliverListAndSliverGridView
 - Algolia(iOS only) ✨
 - SearchDelegate ✨
 - Table ✨

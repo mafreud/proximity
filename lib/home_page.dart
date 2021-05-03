@@ -2,7 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
+import 'package:proximity/app/sliver/sliver_page.dart';
+import 'app/sliver/sliver_list_and_sliver_grid_view_page.dart';
+import 'app/sliver/sliver_app_bar_page.dart';
 import 'app/algolia/algolia_page.dart';
 import 'app/animated_switcher/animated_switcher.dart';
 import 'app/customized_widgets/list_tile_card.dart';
@@ -24,6 +26,13 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            ListTileCard(
+              page: SliverPage(),
+              title: 'Sliver',
+              text: 'A sliver is a portion of a scrollable area that you can define to behave in a special way.',
+              chipList: ['null safety', 'video', 'widget'],
+              gif: 'assets/gif/sliver_app_bar.gif',
+            ),
             Platform.isIOS
                 ? ListTileCard(
                     page: AlgoliaPage(),
