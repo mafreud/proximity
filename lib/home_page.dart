@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:proximity/app/sliver/sliver_page.dart';
+import 'app/indexed_stack/indexed_stack_page.dart';
 import 'app/sliver/sliver_list_and_sliver_grid_view_page.dart';
 import 'app/sliver/sliver_app_bar_page.dart';
 import 'app/algolia/algolia_page.dart';
@@ -27,9 +28,18 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             ListTileCard(
+              page: IndexedStackPage(),
+              title: 'IndexedStack',
+              text:
+                  'A Stack that shows a single child from a list of children.',
+              chipList: ['null safety', 'video', 'widget'],
+              gif: 'assets/gif/indexed_stack.gif',
+            ),
+            ListTileCard(
               page: SliverPage(),
               title: 'Sliver',
-              text: 'A sliver is a portion of a scrollable area that you can define to behave in a special way.',
+              text:
+                  'A sliver is a portion of a scrollable area that you can define to behave in a special way.',
               chipList: ['null safety', 'video', 'widget'],
               gif: 'assets/gif/sliver_app_bar.gif',
             ),

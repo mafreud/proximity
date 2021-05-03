@@ -1,5 +1,3 @@
-
-
 <img src="https://user-images.githubusercontent.com/28733986/116833526-a2679780-abf4-11eb-9bdf-94c46381f26b.png" height="250">
 
 Flutter widgets you haven't used yet.
@@ -19,6 +17,7 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 ## Widgets that you can touch and feel
 
+- IndexedStack ✨
 - Sliver ✨
   - SliverAppBar
   - SliverListAndSliverGridView
@@ -36,7 +35,6 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 ### Widget
 
-- IndexedStack
 - Flow
 - AnimatedWidget
 - ToggleButtons
