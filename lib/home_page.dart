@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:proximity/app/sliver/sliver_page.dart';
 import 'app/sliver/sliver_list_and_sliver_grid_view_page.dart';
@@ -30,13 +33,15 @@ class HomePage extends StatelessWidget {
               chipList: ['null safety', 'video', 'widget'],
               gif: 'assets/gif/sliver_app_bar.gif',
             ),
-            ListTileCard(
-              page: AlgoliaPage(),
-              title: 'Algolia',
-              text: 'full-text search, typo tolerant',
-              chipList: ['null safety', 'plugin'],
-              gif: 'assets/gif/algolia.gif',
-            ),
+            Platform.isIOS
+                ? ListTileCard(
+                    page: AlgoliaPage(),
+                    title: 'Algolia',
+                    text: 'full-text search, typo tolerant',
+                    chipList: ['null safety', 'plugin'],
+                    gif: 'assets/gif/algolia.gif',
+                  )
+                : SizedBox(),
             ListTileCard(
               page: SearchDelegatePage(),
               title: 'Search',

@@ -1,8 +1,11 @@
-<img src="https://user-images.githubusercontent.com/28733986/116560194-1cb9c280-a93c-11eb-83aa-d6922cc45f91.jpg" width="512" height="250">
+
+
+<img src="https://user-images.githubusercontent.com/28733986/116833526-a2679780-abf4-11eb-9bdf-94c46381f26b.png" height="250">
 
 Flutter widgets you haven't used yet.
 
-<a href='https://play.google.com/store/apps/details?id=com.flutterproximity&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'  height="130"/></a>
+<a href='https://play.google.com/store/apps/details?id=com.flutterproximity&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://user-images.githubusercontent.com/28733986/116828704-52300b80-abdb-11eb-8c7a-ac6af4596641.png'  height="110"/></a>
+<a href='https://apps.apple.com/us/app/futter-proximity/id1565428569'><img alt='Download on the App Store' src='https://user-images.githubusercontent.com/28733986/116828669-185f0500-abdb-11eb-95e3-c2eea824113a.png'  height="110"/></a>
 
 ## Problems that proximity solves
 
@@ -19,7 +22,7 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 - Sliver ✨
   - SliverAppBar
   - SliverListAndSliverGridView
-- Algolia ✨
+- Algolia(iOS only) ✨
 - SearchDelegate ✨
 - Table ✨
 - SwitchListTile ✨

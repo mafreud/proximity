@@ -1,8 +1,9 @@
 import 'package:algolia/algolia.dart';
 import 'package:flutter/material.dart';
-import 'package:proximity/app/algolia/algolia_init.dart';
 import 'package:proximity/app/customized_widgets/list_tile_card.dart';
 import 'package:proximity/app/customized_widgets/widget_model.dart';
+
+import 'algolia_service.dart';
 
 class AlgoliaPage extends StatefulWidget {
   @override
@@ -46,19 +47,6 @@ class _AlgoliaPageState extends State<AlgoliaPage> {
               controller: _controller,
               decoration: InputDecoration(hintText: 'Search query here...'),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                // FlatButton(
-                //   color: Colors.blue,
-                //   child: Text(
-                //     "Search",
-                //     style: TextStyle(color: Colors.white),
-                //   ),
-                //   onPressed: _search,
-                // ),
-              ],
-            ),
             SizedBox(height: 10),
             Expanded(
               child: _searching == true
@@ -99,7 +87,7 @@ class _AlgoliaPageState extends State<AlgoliaPage> {
       _searching = true;
     });
 
-    final algolia = AlgoliaInitialization.init();
+    final algolia = AlgoliaService.init();
 
     AlgoliaQuery query = algolia.instance.index('prod_PROXIMITY');
     query = query.query(text);

@@ -1,0 +1,11 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Flutter unsound null-safety",
+      "request": "launch",
+      "type": "dart"
+      //   "args": ["--no-sound-null-safety"]
+    }
+  ]
+}
