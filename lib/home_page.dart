@@ -23,6 +23,17 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('proximity'),
+        actions: [
+          Platform.isIOS
+              ? IconButton(
+                  icon: Icon(Icons.search),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => AlgoliaPage()));
+                  },
+                )
+              : SizedBox()
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(

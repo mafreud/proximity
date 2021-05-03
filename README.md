@@ -35,6 +35,8 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 ### Widget
 
+- FractionallySizedBox
+- AnimatedList
 - Flow
 - AnimatedWidget
 - ToggleButtons
