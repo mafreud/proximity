@@ -17,16 +17,16 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 ## Widgets that you can touch and feel
 
-- IndexedStack ✨
-- Sliver ✨
+- IndexedStack
+- Sliver
   - SliverAppBar
   - SliverListAndSliverGridView
-- Algolia(iOS only) ✨
-- SearchDelegate ✨
-- Table ✨
-- SwitchListTile ✨
-- AnimatedSwitcher ✨
-- RotatedBox ✨
+- Algolia(iOS only) - Full-text search
+- SearchDelegate
+- Table
+- SwitchListTile
+- AnimatedSwitcher
+- RotatedBox
 - Scrollbar
 - ExpansionPanel
 - PhysicalModel
@@ -53,5 +53,4 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 ## Future Feature
 
-- Full-text search
 - FCM
