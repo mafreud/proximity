@@ -2,7 +2,19 @@ import 'package:algolia/algolia.dart';
 import 'package:flutter/material.dart';
 import 'package:proximity/app/customized_widgets/list_tile_card.dart';
 import 'package:proximity/app/customized_widgets/widget_model.dart';
+import 'package:proximity/app/indexed_stack/indexed_stack_page.dart';
+import 'package:proximity/app/search_delegate/search_delegate_page.dart';
+import 'package:proximity/app/sliver/sliver_app_bar_page.dart';
+import 'package:proximity/app/sliver/sliver_list_and_sliver_grid_view_page.dart';
+import 'package:proximity/app/sliver/sliver_page.dart';
+import 'package:proximity/app/switch_list_tile/switch_list_tile_page.dart';
+import 'package:proximity/app/table/table_page.dart';
 
+import '../animated_switcher/animated_switcher.dart';
+import '../expansion_panel/expansion_panel_page.dart';
+import '../physical_model/physical_model.dart';
+import '../rotated_box/rotated_box.dart';
+import '../scrollbar/scrollbar_page.dart';
 import 'algolia_service.dart';
 
 class AlgoliaPage extends StatefulWidget {
@@ -63,13 +75,15 @@ class _AlgoliaPageState extends State<AlgoliaPage> {
                             var snap = _results[index];
                             final data = snap.data;
                             final widget = WidgetModel.fromMap(data);
+                            final page = retrieveWidget(widget.name);
 
                             return ListTileCard(
-                                page: null,
-                                title: widget.name,
-                                text: widget.description,
-                                chipList: widget.tag,
-                                gif: widget.gif);
+                              page: page,
+                              title: widget.name,
+                              text: widget.description,
+                              chipList: widget.tag,
+                              gif: widget.gif,
+                            );
                           },
                         ),
             ),
@@ -80,9 +94,6 @@ class _AlgoliaPageState extends State<AlgoliaPage> {
   }
 
   Future<void> _search({required String text}) async {
-    // if (text == '') {
-    //   return;
-    // }
     setState(() {
       _searching = true;
     });
@@ -97,5 +108,65 @@ class _AlgoliaPageState extends State<AlgoliaPage> {
     setState(() {
       _searching = false;
     });
+  }
+
+  Widget retrieveWidget(String widgetName) {
+    switch (widgetName) {
+      case 'IndexedStack':
+        {
+          return IndexedStackPage();
+        }
+      case 'Sliver':
+        {
+          return SliverPage();
+        }
+      case 'SliverAppBar':
+        {
+          return SliverAppBarPage();
+        }
+      case 'SliverListAndSliverGridView':
+        {
+          return SliverListAndSliverGridViewPage();
+        }
+      case 'Algolia':
+        {
+          return AlgoliaPage();
+        }
+      case 'Search':
+        {
+          return SearchDelegatePage();
+        }
+      case 'Table':
+        {
+          return TablePage();
+        }
+      case 'SwitchListTile':
+        {
+          return SwitchListTilePage();
+        }
+      case 'AnimatedSwitcher':
+        {
+          return AnimatedSwitcherPage();
+        }
+
+      case 'RotatedBox':
+        {
+          return RotatedBoxPage();
+        }
+      case 'Scrollbar':
+        {
+          return ScrollbarPage();
+        }
+      case 'ExpansionPanel':
+        {
+          return ExpansionPanelPage();
+        }
+      case 'PhysicalModel':
+        {
+          return PhysicalModelPage();
+        }
+      default:
+        return AlgoliaPage();
+    }
   }
 }

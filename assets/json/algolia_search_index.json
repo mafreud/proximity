@@ -1,5 +1,41 @@
 [
   {
+    "name": "IndexedStack",
+    "description": "A Stack that shows a single child from a list of children.",
+    "tag": ["null safety", "widget", "video"],
+    "gif": "assets/gif/indexed_stack.gif"
+  },
+  {
+    "name": "Sliver",
+    "description": "A sliver is a portion of a scrollable area that you can define to behave in a special way.",
+    "tag": ["null safety", "widget", "video"],
+    "gif": "assets/gif/sliver_app_bar.gif"
+  },
+  {
+    "name": "SliverAppBar",
+    "description": "A material design app bar that integrates with a CustomScrollView.",
+    "tag": ["null safety", "widget", "video"],
+    "gif": "assets/gif/sliver_app_bar.gif"
+  },
+  {
+    "name": "SliverListAndSliverGridView",
+    "description": "A sliver that places multiple box children in a two dimensional arrangement. A sliver that places multiple box children in a linear array along the main axis.",
+    "tag": ["null safety", "widget", "video"],
+    "gif": "assets/gif/sliver_list_and_sliver_grid_view.gif"
+  },
+  {
+    "name": "Algolia",
+    "description": "full-text search, typo tolerant",
+    "tag": ["null safety", "plugin"],
+    "gif": "assets/gif/algolia.gif"
+  },
+  {
+    "name": "Algolia",
+    "description": "full-text search, typo tolerant",
+    "tag": ["null safety", "plugin"],
+    "gif": "assets/gif/algolia.gif"
+  },
+  {
     "name": "Algolia",
     "description": "full-text search, typo tolerant",
     "tag": ["null safety", "plugin"],
