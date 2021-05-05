@@ -17,6 +17,7 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 ## Widgets that you can touch and feel
 
+- FractionallySizedBox
 - IndexedStack
 - Sliver
   - SliverAppBar
@@ -35,7 +36,7 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 ### Widget
 
-- FractionallySizedBox
+- Slider
 - AnimatedList
 - Flow
 - AnimatedWidget
@@ -49,6 +50,7 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 ### Package
 
+- adobe_xd
 - flutter_slidable
 
 ## Future Feature

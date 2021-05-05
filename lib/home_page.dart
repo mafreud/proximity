@@ -2,7 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:proximity/app/fractionally_sized_box/fractionally_sized_box.dart';
 import 'package:proximity/app/sliver/sliver_page.dart';
+import 'app/animated_list/animated_list.dart';
 import 'app/indexed_stack/indexed_stack_page.dart';
 import 'app/sliver/sliver_list_and_sliver_grid_view_page.dart';
 import 'app/sliver/sliver_app_bar_page.dart';
@@ -38,6 +40,14 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            ListTileCard(
+              page: FractionallySizedBoxPage(),
+              title: 'FractionallySizedBox',
+              text:
+                  'A widget that sizes its child to a fraction of the total available space.',
+              chipList: ['null safety', 'video', 'widget'],
+              gif: 'assets/gif/fractionally_sized_box.gif',
+            ),
             ListTileCard(
               page: IndexedStackPage(),
               title: 'IndexedStack',
