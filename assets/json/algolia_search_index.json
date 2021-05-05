@@ -1,5 +1,11 @@
 [
   {
+    "name": "FractionallySizedBox",
+    "description": "A widget that sizes its child to a fraction of the total available space.",
+    "tag": ["null safety", "widget", "video"],
+    "gif": "assets/gif/fractionally_sized_box.gif"
+  },
+  {
     "name": "IndexedStack",
     "description": "A Stack that shows a single child from a list of children.",
     "tag": ["null safety", "widget", "video"],

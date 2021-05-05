@@ -2,6 +2,7 @@ import 'package:algolia/algolia.dart';
 import 'package:flutter/material.dart';
 import 'package:proximity/app/customized_widgets/list_tile_card.dart';
 import 'package:proximity/app/customized_widgets/widget_model.dart';
+import 'package:proximity/app/fractionally_sized_box/fractionally_sized_box.dart';
 import 'package:proximity/app/indexed_stack/indexed_stack_page.dart';
 import 'package:proximity/app/search_delegate/search_delegate_page.dart';
 import 'package:proximity/app/sliver/sliver_app_bar_page.dart';
@@ -112,6 +113,10 @@ class _AlgoliaPageState extends State<AlgoliaPage> {
 
   Widget retrieveWidget(String widgetName) {
     switch (widgetName) {
+      case 'FractionallySizedBox':
+        {
+          return FractionallySizedBoxPage();
+        }
       case 'IndexedStack':
         {
           return IndexedStackPage();
