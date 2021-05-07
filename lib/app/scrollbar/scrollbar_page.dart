@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class ScrollbarPage extends StatelessWidget {
   @override
@@ -15,14 +14,14 @@ class ScrollbarPage extends StatelessWidget {
                 color: Colors.red,
               ),
               onPressed: () {
-                _launchURL(_videoUrl);
+                // _launchURL(_videoUrl);
               }),
           IconButton(
             icon: Icon(
               FontAwesomeIcons.bookOpen,
             ),
             onPressed: () {
-              _launchURL(_documentUrl);
+              // _launchURL(_documentUrl);
             },
           ),
         ],
@@ -76,7 +75,7 @@ class ScrollbarPage extends StatelessWidget {
     Colors.yellowAccent,
   ];
 
-  void _launchURL(String _url) async => await canLaunch(_url)
-      ? await launch(_url)
-      : throw 'Could not launch $_url';
+  // void _launchURL(String _url) async => await canLaunch(_url)
+  //     ? await launch(_url)
+  //     : throw 'Could not launch $_url';
 }

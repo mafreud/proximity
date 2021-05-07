@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class SwitchListTilePage extends StatefulWidget {
   @override
@@ -23,14 +22,14 @@ class _SwitchListTilePageState extends State<SwitchListTilePage> {
                 color: Colors.red,
               ),
               onPressed: () {
-                _launchURL(_videoUrl);
+                // _launchURL(_videoUrl);
               }),
           IconButton(
             icon: Icon(
               FontAwesomeIcons.bookOpen,
             ),
             onPressed: () {
-              _launchURL(_documentUrl);
+              // _launchURL(_documentUrl);
             },
           ),
         ],
@@ -75,7 +74,7 @@ class _SwitchListTilePageState extends State<SwitchListTilePage> {
 
   final _videoUrl = 'https://youtu.be/0igIjvtEWNU';
 
-  void _launchURL(String _url) async => await canLaunch(_url)
-      ? await launch(_url)
-      : throw 'Could not launch $_url';
+  // void _launchURL(String _url) async => await canLaunch(_url)
+  //     ? await launch(_url)
+  //     : throw 'Could not launch $_url';
 }

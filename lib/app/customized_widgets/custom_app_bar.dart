@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -25,23 +24,23 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               color: Colors.red,
             ),
             onPressed: () {
-              _launchURL(videoUrl);
+              // _launchURL(videoUrl);
             }),
         IconButton(
           icon: Icon(
             FontAwesomeIcons.bookOpen,
           ),
           onPressed: () {
-            _launchURL(documentUrl);
+            // _launchURL(documentUrl);
           },
         ),
       ],
     );
   }
 
-  void _launchURL(String _url) async => await canLaunch(_url)
-      ? await launch(_url)
-      : throw 'Could not launch $_url';
+  // void _launchURL(String _url) async => await canLaunch(_url)
+  //     ? await launch(_url)
+  //     : throw 'Could not launch $_url';
 
   @override
   Size get preferredSize => Size.fromHeight(appBar.preferredSize.height);
