@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:proximity/app/customized_widgets/custom_app_bar.dart';
 
 class Item {
   Item({
@@ -33,26 +33,11 @@ class _ExpansionPanelPageState extends State<ExpansionPanelPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          IconButton(
-              icon: Icon(
-                FontAwesomeIcons.youtube,
-                color: Colors.red,
-              ),
-              onPressed: () {
-                // _launchURL(_videoUrl);
-              }),
-          IconButton(
-            icon: Icon(
-              FontAwesomeIcons.bookOpen,
-            ),
-            onPressed: () {
-              // _launchURL(_documentUrl);
-            },
-          ),
-        ],
-        title: Text('ExpansionPanel'),
+      appBar: CustomAppBar(
+        title: 'ExpansionPanel',
+        documentUrl:
+            'https://api.flutter.dev/flutter/material/ExpansionPanel-class.html',
+        videoUrl: 'https://youtu.be/2aJZzRMziJc',
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -89,12 +74,4 @@ class _ExpansionPanelPageState extends State<ExpansionPanelPage> {
       ),
     );
   }
-
-  final _documentUrl =
-      'https://api.flutter.dev/flutter/material/ExpansionPanel-class.html';
-  final _videoUrl = 'https://youtu.be/2aJZzRMziJc';
-
-  // void _launchURL(String _url) async => await canLaunch(_url)
-  //     ? await launch(_url)
-  //     : throw 'Could not launch $_url';
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:proximity/app/customized_widgets/custom_app_bar.dart';
 
 class AnimatedSwitcherPage extends StatefulWidget {
   @override
@@ -12,26 +12,11 @@ class _AnimatedSwitcherPageState extends State<AnimatedSwitcherPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('AnimatedSwitcher'),
-        actions: [
-          IconButton(
-              icon: Icon(
-                FontAwesomeIcons.youtube,
-                color: Colors.red,
-              ),
-              onPressed: () {
-                // _launchURL(_videoUrl);
-              }),
-          IconButton(
-            icon: Icon(
-              FontAwesomeIcons.bookOpen,
-            ),
-            onPressed: () {
-              // _launchURL(_documentUrl);
-            },
-          ),
-        ],
+      appBar: CustomAppBar(
+        title: 'AnimatedSwitcher',
+        documentUrl:
+            'https://api.flutter.dev/flutter/widgets/AnimatedSwitcher-class.html',
+        videoUrl: 'https://youtu.be/2W7POjFb88g',
       ),
       body: Center(
         child: Column(
@@ -80,13 +65,4 @@ class _AnimatedSwitcherPageState extends State<AnimatedSwitcherPage> {
       ),
     );
   }
-
-  final _documentUrl =
-      'https://api.flutter.dev/flutter/widgets/AnimatedSwitcher-class.html';
-
-  final _videoUrl = 'https://youtu.be/2W7POjFb88g';
-
-  // void _launchURL(String _url) async => await canLaunch(_url)
-  //     ? await launch(_url)
-  //     : throw 'Could not launch $_url';
 }
