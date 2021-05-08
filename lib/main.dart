@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:proximity/app/welcome/welcome_page.dart';
 
 import 'home_page.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.dark,
-      home: HomePage(),
+      home: WelcomePage(),
     );
   }
 }
