@@ -11,9 +11,12 @@ class WelcomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              'assets/images/app_icon.png',
-              width: screenWidth / 2,
+            Padding(
+              padding: const EdgeInsets.all(40.0),
+              child: Image.asset(
+                'assets/images/app_icon.png',
+                width: screenWidth / 2,
+              ),
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -39,14 +42,14 @@ class WelcomePage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             InkWell(
-              child: Text(
-                'By Tapping Get Started \nyou are agreeing to the Terms and Conditions.',
-                textAlign: TextAlign.center,
-              ),
               onTap: () {
                 _launchURL(
                     'https://www.privacypolicies.com/live/08ba4ed6-16f0-4327-b25a-3c4b2ba463fa');
               },
+              child: const Text(
+                'By Tapping Get Started \nyou are agreeing to the Terms and Conditions.',
+                textAlign: TextAlign.center,
+              ),
             ),
           ],
         ),
