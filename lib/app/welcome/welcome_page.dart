@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:proximity/app/welcome/welcome_view_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class WelcomePage extends StatelessWidget {
+class WelcomePage extends ConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ScopedReader watch) {
     final screenWidth = MediaQuery.of(context).size.width;
+    final viewModel = watch(welcomeViewModelProvider);
     return Scaffold(
       backgroundColor: Color(0xFF202124),
       body: Center(
@@ -25,7 +28,9 @@ class WelcomePage extends StatelessWidget {
                 elevation: 3,
                 minimumSize: Size(110, 37), //////// HERE
               ),
-              onPressed: () {},
+              onPressed: () async {
+                await viewModel.signUp();
+              },
               child: Text('Get Started'),
             ),
             ElevatedButton(
