@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
+import '../customized_widgets/custom_app_bar.dart';
 
 class TablePage extends StatefulWidget {
   @override
@@ -13,26 +12,10 @@ class _TablePageState extends State<TablePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Table'),
-        actions: [
-          IconButton(
-              icon: Icon(
-                FontAwesomeIcons.youtube,
-                color: Colors.red,
-              ),
-              onPressed: () {
-                _launchURL(_videoUrl);
-              }),
-          IconButton(
-            icon: Icon(
-              FontAwesomeIcons.bookOpen,
-            ),
-            onPressed: () {
-              _launchURL(_documentUrl);
-            },
-          ),
-        ],
+      appBar: CustomAppBar(
+        title: 'Table',
+        documentUrl: 'https://api.flutter.dev/flutter/widgets/Table-class.html',
+        videoUrl: 'https://youtu.be/_lbE0wsVZSw',
       ),
       body: Center(
         child: Table(
@@ -81,15 +64,6 @@ class _TablePageState extends State<TablePage> {
       ),
     );
   }
-
-  final _documentUrl =
-      'https://api.flutter.dev/flutter/widgets/Table-class.html';
-
-  final _videoUrl = 'https://youtu.be/_lbE0wsVZSw';
-
-  void _launchURL(String _url) async => await canLaunch(_url)
-      ? await launch(_url)
-      : throw 'Could not launch $_url';
 }
 
 class _Container extends StatelessWidget {

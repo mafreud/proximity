@@ -1,31 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
+import '../customized_widgets/custom_app_bar.dart';
 
 class ScrollbarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Scrollbar'),
-        actions: [
-          IconButton(
-              icon: Icon(
-                FontAwesomeIcons.youtube,
-                color: Colors.red,
-              ),
-              onPressed: () {
-                _launchURL(_videoUrl);
-              }),
-          IconButton(
-            icon: Icon(
-              FontAwesomeIcons.bookOpen,
-            ),
-            onPressed: () {
-              _launchURL(_documentUrl);
-            },
-          ),
-        ],
+      appBar: CustomAppBar(
+        title: 'RotatedBox',
+        documentUrl:
+            'https://api.flutter.dev/flutter/material/Scrollbar-class.html',
+        videoUrl: 'https://www.youtube.com/watch?v=DbkIQSvwnZc',
       ),
       body: Scrollbar(
         thickness: 10,
@@ -55,9 +39,6 @@ class ScrollbarPage extends StatelessWidget {
     );
   }
 
-  final _documentUrl =
-      'https://api.flutter.dev/flutter/material/Scrollbar-class.html';
-  final _videoUrl = 'https://www.youtube.com/watch?v=DbkIQSvwnZc';
   final _colorList = [
     Colors.amber,
     Colors.amberAccent,
@@ -75,8 +56,4 @@ class ScrollbarPage extends StatelessWidget {
     Colors.yellow,
     Colors.yellowAccent,
   ];
-
-  void _launchURL(String _url) async => await canLaunch(_url)
-      ? await launch(_url)
-      : throw 'Could not launch $_url';
 }
