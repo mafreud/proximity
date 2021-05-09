@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../customized_widgets/custom_app_bar.dart';
 
 class AnimatedSwitcherPage extends StatefulWidget {
