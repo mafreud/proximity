@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:proximity/app/firebase/cloud_firestore/cloud_firestore_service.dart';
-import 'package:proximity/app/firebase/cloud_firestore/firestore_path.dart';
+import '../firebase/cloud_firestore/cloud_firestore_service.dart';
+import '../firebase/cloud_firestore/firestore_path.dart';
 
 final userRemoteDataSourceProvider = Provider<UserRemoteDataSource>((ref) {
   return UserRemoteDataSource(

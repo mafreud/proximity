@@ -23,7 +23,7 @@ PODS:
     - Firebase/Analytics (= 7.11.0)
     - firebase_core
     - Flutter
-  - firebase_auth (1.1.0):
+  - firebase_auth (1.1.1):
     - Firebase/Auth (= 7.11.0)
     - firebase_core
     - Flutter
@@ -131,8 +131,6 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (1.2.12)
-  - shared_preferences (0.0.1):
-    - Flutter
   - url_launcher (0.0.1):
     - Flutter
 
@@ -144,7 +142,6 @@ DEPENDENCIES:
   - firebase_messaging (from `.symlinks/plugins/firebase_messaging/ios`)
   - FirebaseFirestore (from `https://github.com/invertase/firestore-ios-sdk-frameworks.git`, tag `7.11.0`)
   - Flutter (from `Flutter`)
-  - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
   - url_launcher (from `.symlinks/plugins/url_launcher/ios`)
 
 SPEC REPOS:
@@ -180,8 +177,6 @@ EXTERNAL SOURCES:
     :tag: 7.11.0
   Flutter:
     :path: Flutter
-  shared_preferences:
-    :path: ".symlinks/plugins/shared_preferences/ios"
   url_launcher:
     :path: ".symlinks/plugins/url_launcher/ios"
 
@@ -194,7 +189,7 @@ SPEC CHECKSUMS:
   cloud_firestore: 01f3fc4bb5c46b400a329320ea7f61a73817a657
   Firebase: c121feb35e4126c0b355e3313fa9b487d47319fd
   firebase_analytics: 1212d578d019d82c6301bc64c818ef54abe385e4
-  firebase_auth: a4a69b0769f301f726bd1ec1f7de21f08e790248
+  firebase_auth: b397bb6540696d75b9acf9579b64948fd36a8e8d
   firebase_core: 84dcd80ac6d29c3d1039071b7306ee99688eb9c7
   firebase_messaging: 7aecb08eada5e5cde85b10875141706a8d18b818
   FirebaseAnalytics: cd3bd84d722a24a8923918af8af8e5236f615d77
@@ -212,7 +207,6 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
-  shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
   url_launcher: 6fef411d543ceb26efce54b05a0a40bfd74cbbef
 
 PODFILE CHECKSUM: e3f853ac46edb9fb627e591eab34b23c77e46aa7

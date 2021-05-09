@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:proximity/app/customized_widgets/custom_app_bar.dart';
+
+import '../customized_widgets/custom_app_bar.dart';
 
 class SwitchListTilePage extends StatefulWidget {
   @override

@@ -3,9 +3,10 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:proximity/app/fractionally_sized_box/fractionally_sized_box.dart';
-import 'package:proximity/app/home/home_view_model.dart';
-import 'package:proximity/app/sliver/sliver_page.dart';
+import '../fractionally_sized_box/fractionally_sized_box.dart';
+import 'home_view_model.dart';
+import '../sliver/sliver_page.dart';
+import '../welcome/welcome_page.dart';
 import '../animated_list/animated_list.dart';
 import '../indexed_stack/indexed_stack_page.dart';
 import '../sliver/sliver_list_and_sliver_grid_view_page.dart';
@@ -32,6 +33,8 @@ class HomePage extends ConsumerWidget {
             icon: Icon(Icons.exit_to_app),
             onPressed: () async {
               await viewModel.logout();
+              await await Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => WelcomePage()));
             }),
         actions: [
           Platform.isIOS

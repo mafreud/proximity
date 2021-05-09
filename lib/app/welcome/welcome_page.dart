@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:proximity/app/welcome/welcome_view_model.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../home/home_page.dart';
+import 'welcome_view_model.dart';
 
 class WelcomePage extends ConsumerWidget {
   @override
@@ -30,6 +32,8 @@ class WelcomePage extends ConsumerWidget {
               ),
               onPressed: () async {
                 await viewModel.signUp();
+                await Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => HomePage()));
               },
               child: Text('Get Started'),
             ),

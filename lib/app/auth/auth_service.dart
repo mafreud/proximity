@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:proximity/app/firebase/firebase_auth/firebase_auth_service.dart';
-import 'package:proximity/app/user/user_service.dart';
+import '../firebase/firebase_auth/firebase_auth_service.dart';
+import '../user/user_service.dart';
 
 final authServiceProvider = Provider<AuthService>((ref) {
   return AuthService(

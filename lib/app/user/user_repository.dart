@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:proximity/app/user/user_model.dart';
-import 'package:proximity/app/user/user_remote_data_source.dart';
+import 'user_model.dart';
+import 'user_remote_data_source.dart';
 
 final userRepositoryProvider = Provider<UserRepository>((ref) {
   return UserRepository(

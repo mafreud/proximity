@@ -2,8 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:proximity/app/firebase/firebase_auth/firebase_auth_service.dart';
-import 'package:proximity/app/welcome/welcome_page.dart';
+import 'app/firebase/firebase_auth/firebase_auth_service.dart';
+import 'app/welcome/welcome_page.dart';
 
 import 'app/home/home_page.dart';
 
