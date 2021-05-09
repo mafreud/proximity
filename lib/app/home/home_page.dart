@@ -1,26 +1,23 @@
 import 'dart:io';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../fractionally_sized_box/fractionally_sized_box.dart';
-import 'home_view_model.dart';
-import '../sliver/sliver_page.dart';
-import '../welcome/welcome_page.dart';
-import '../animated_list/animated_list.dart';
-import '../indexed_stack/indexed_stack_page.dart';
-import '../sliver/sliver_list_and_sliver_grid_view_page.dart';
-import '../sliver/sliver_app_bar_page.dart';
+
 import '../algolia/algolia_page.dart';
 import '../animated_switcher/animated_switcher.dart';
 import '../customized_widgets/list_tile_card.dart';
 import '../expansion_panel/expansion_panel_page.dart';
+import '../fractionally_sized_box/fractionally_sized_box.dart';
+import '../indexed_stack/indexed_stack_page.dart';
 import '../physical_model/physical_model.dart';
 import '../rotated_box/rotated_box.dart';
 import '../scrollbar/scrollbar_page.dart';
 import '../search_delegate/search_delegate_page.dart';
+import '../sliver/sliver_page.dart';
 import '../switch_list_tile/switch_list_tile_page.dart';
 import '../table/table_page.dart';
+import '../welcome/welcome_page.dart';
+import 'home_view_model.dart';
 
 class HomePage extends ConsumerWidget {
   @override
