@@ -10,12 +10,19 @@ final authServiceProvider = Provider<AuthService>((ref) {
 });
 
 class AuthService {
-  AuthService(this._firebaseAuthService, this._userService);
+  AuthService(
+    this._firebaseAuthService,
+    this._userService,
+  );
   final FirebaseAuthService _firebaseAuthService;
   final UserService _userService;
 
   Future<void> signUp() async {
     final userId = await _firebaseAuthService.signUpAnonymously();
     await _userService.setUser(userId);
+  }
+
+  Future<void> logout() async {
+    await _firebaseAuthService.signOut;
   }
 }

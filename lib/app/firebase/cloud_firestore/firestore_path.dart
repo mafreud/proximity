@@ -5,5 +5,7 @@ class FirestorePath {
   /// user/v1/users/:uid
   static String userPath(String userId) => '$userDomain/$userId';
 
-  static String fcmTokenPath(String userId) => '${userPath(userId)}/fcm_token';
+  /// user/v1/users/:uid/fcmToken
+  static String fcmTokenPath(String userId) =>
+      '${userPath(userId)}/fcm_token/fcm_token';
 }

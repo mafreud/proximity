@@ -2,29 +2,37 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:proximity/app/fractionally_sized_box/fractionally_sized_box.dart';
+import 'package:proximity/app/home/home_view_model.dart';
 import 'package:proximity/app/sliver/sliver_page.dart';
-import 'app/animated_list/animated_list.dart';
-import 'app/indexed_stack/indexed_stack_page.dart';
-import 'app/sliver/sliver_list_and_sliver_grid_view_page.dart';
-import 'app/sliver/sliver_app_bar_page.dart';
-import 'app/algolia/algolia_page.dart';
-import 'app/animated_switcher/animated_switcher.dart';
-import 'app/customized_widgets/list_tile_card.dart';
-import 'app/expansion_panel/expansion_panel_page.dart';
-import 'app/physical_model/physical_model.dart';
-import 'app/rotated_box/rotated_box.dart';
-import 'app/scrollbar/scrollbar_page.dart';
-import 'app/search_delegate/search_delegate_page.dart';
-import 'app/switch_list_tile/switch_list_tile_page.dart';
-import 'app/table/table_page.dart';
+import '../animated_list/animated_list.dart';
+import '../indexed_stack/indexed_stack_page.dart';
+import '../sliver/sliver_list_and_sliver_grid_view_page.dart';
+import '../sliver/sliver_app_bar_page.dart';
+import '../algolia/algolia_page.dart';
+import '../animated_switcher/animated_switcher.dart';
+import '../customized_widgets/list_tile_card.dart';
+import '../expansion_panel/expansion_panel_page.dart';
+import '../physical_model/physical_model.dart';
+import '../rotated_box/rotated_box.dart';
+import '../scrollbar/scrollbar_page.dart';
+import '../search_delegate/search_delegate_page.dart';
+import '../switch_list_tile/switch_list_tile_page.dart';
+import '../table/table_page.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends ConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ScopedReader watch) {
+    final viewModel = watch(homeViewModelProvider);
     return Scaffold(
       appBar: AppBar(
         title: Text('proximity'),
+        leading: IconButton(
+            icon: Icon(Icons.exit_to_app),
+            onPressed: () async {
+              await viewModel.logout();
+            }),
         actions: [
           Platform.isIOS
               ? IconButton(
@@ -34,7 +42,7 @@ class HomePage extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => AlgoliaPage()));
                   },
                 )
-              : SizedBox()
+              : SizedBox(),
         ],
       ),
       body: SingleChildScrollView(
