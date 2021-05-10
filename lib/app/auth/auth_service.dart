@@ -21,10 +21,13 @@ class AuthService {
   final FirebaseAuthService _firebaseAuthService;
   final UserService _userService;
 
+  String get currentUserId => _firebaseAuthService.currentUserId;
+
   Future<void> signUp() async {
     final userId = await _firebaseAuthService.signUpAnonymously();
     await _userService.setUser(userId);
-    await _fcmService.requestPermission();
+    // await _fcmService.requestPermission();
+    // await _fcmService.saveTokenToDatabase();
   }
 
   Future<void> logout() async {
