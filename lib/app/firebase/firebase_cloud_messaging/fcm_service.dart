@@ -1,43 +1,24 @@
-// import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:proximity/app/auth/auth_service.dart';
-import 'package:proximity/app/firebase/cloud_firestore/cloud_firestore_service.dart';
-import 'package:proximity/app/firebase/cloud_firestore/firestore_path.dart';
 
 final fcmServiceProvider = Provider<FCMService>((ref) {
-  return FCMService(
-      // ref.watch(authServiceProvider),
-      // ref.watch(cloudFirestoreServiceProvider),
-      );
+  return FCMService();
 });
 
 class FCMService {
-  // FCMService(this._authService, this._cloudFirestoreService);
+  final FirebaseMessaging _messaging = FirebaseMessaging.instance;
 
-  // final FirebaseMessaging _messaging = FirebaseMessaging.instance;
-  // final AuthService _authService;
-  // final CloudFirestoreService _cloudFirestoreService;
+  Future<void> requestPermission() async {
+    final settings = await _messaging.requestPermission(
+      alert: true,
+      announcement: false,
+      badge: true,
+      carPlay: false,
+      criticalAlert: false,
+      provisional: false,
+      sound: true,
+    );
 
-  // Future<void> requestPermission() async {
-  //   final settings = await _messaging.requestPermission(
-  //     alert: true,
-  //     announcement: false,
-  //     badge: true,
-  //     carPlay: false,
-  //     criticalAlert: false,
-  //     provisional: false,
-  //     sound: true,
-  //   );
-
-  //   print('User granted permission: ${settings.authorizationStatus}');
-  // }
-
-  // Future<String?> get fcmToken async => await _messaging.getToken();
-
-  // Future<void> saveTokenToDatabase() async {
-  //   final token = await fcmToken;
-  //   await _cloudFirestoreService.setData(
-  //       path: FirestorePath.fcmTokenPath(_authService.currentUserId),
-  //       data: {'token': token});
-  // }
+    print('User granted permission: ${settings.authorizationStatus}');
+  }
 }
