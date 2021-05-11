@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final authStateProvider = StreamProvider<dynamic>((_) {
@@ -10,6 +11,11 @@ final firebaseAuthServiceProvider = Provider<FirebaseAuthService>((ref) {
 });
 
 class FirebaseAuthService {
+  FirebaseAuthService() {
+    Future(() async {
+      await Firebase.initializeApp();
+    });
+  }
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
   String get currentUserId => _firebaseAuth.currentUser!.uid;
