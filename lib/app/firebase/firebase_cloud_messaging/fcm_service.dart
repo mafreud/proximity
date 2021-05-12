@@ -31,7 +31,7 @@ class FCMService {
 
   Future<void> saveTokenToFirestore(String userId) async {
     final token = await fcmToken;
-    await _cloudFirestoreService
-        .setData(path: 'social/$userId', data: {'token': token});
+    await _cloudFirestoreService.setData(
+        path: FirestorePath.fcmTokenPath(userId), data: {'token': token});
   }
 }
