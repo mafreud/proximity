@@ -17,6 +17,7 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 ## Widgets that you can touch and feel
 
+- FCM(Push notification)
 - FractionallySizedBox
 - IndexedStack
 - Sliver
@@ -54,7 +55,3 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 - adobe_xd
 - flutter_slidable
 - flutter_chat_ui
-
-## Future Feature
-
-- FCM
