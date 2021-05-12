@@ -25,12 +25,9 @@ class AuthService {
     final userId = await _firebaseAuthService.signUpAnonymously();
     await _userService.setUser(userId);
     await _fcmService.requestPermission();
-    // await _fcmService.saveTokenToFirestore();
   }
 
   Future<void> logout() async {
     await _firebaseAuthService.signOut;
   }
-
-  String get currentUserId => _firebaseAuthService.currentUserId;
 }

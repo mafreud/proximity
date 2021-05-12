@@ -1,7 +1,3 @@
 {
-    "dart.flutterSdkPath": "/Users/rafekun/fvm/versions/stable",
-    "cSpell.words": [
-        "firestore",
-        "riverpod"
-    ]
+    "dart.flutterSdkPath": "/Users/rafekun/fvm/versions/stable"
 }
