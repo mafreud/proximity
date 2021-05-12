@@ -26,7 +26,7 @@ class AuthService {
     await _userService.setUser(userId);
     await _fcmService.requestPermission();
     final token = await _fcmService.fcmToken;
-    print(token);
+    await _fcmService.saveTokenToFirestore(userId);
   }
 
   Future<void> logout() async {
