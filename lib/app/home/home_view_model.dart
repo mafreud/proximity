@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 import '../auth/auth_service.dart';
 
 final homeViewModelProvider = Provider<HomeViewModel>((ref) {

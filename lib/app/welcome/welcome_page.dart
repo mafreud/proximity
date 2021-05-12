@@ -37,18 +37,18 @@ class WelcomePage extends ConsumerWidget {
               },
               child: Text('Get Started'),
             ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: Colors.white10,
-                elevation: 3,
-                minimumSize: Size(110, 37), //////// HERE
-              ),
-              onPressed: () {},
-              child: Text(
-                'Login',
-                style: TextStyle(color: Colors.blue),
-              ),
-            ),
+            // ElevatedButton(
+            //   style: ElevatedButton.styleFrom(
+            //     primary: Colors.white10,
+            //     elevation: 3,
+            //     minimumSize: Size(110, 37), //////// HERE
+            //   ),
+            //   onPressed: () {},
+            //   child: Text(
+            //     'Login',
+            //     style: TextStyle(color: Colors.blue),
+            //   ),
+            // ),
             SizedBox(height: 20),
             InkWell(
               onTap: () {
