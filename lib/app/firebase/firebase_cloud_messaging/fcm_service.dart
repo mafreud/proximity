@@ -21,4 +21,6 @@ class FCMService {
 
     print('User granted permission: ${settings.authorizationStatus}');
   }
+
+  Future<String?> get fcmToken async => await _messaging.getToken();
 }

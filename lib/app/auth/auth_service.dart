@@ -25,6 +25,8 @@ class AuthService {
     final userId = await _firebaseAuthService.signUpAnonymously();
     await _userService.setUser(userId);
     await _fcmService.requestPermission();
+    final token = await _fcmService.fcmToken;
+    print(token);
   }
 
   Future<void> logout() async {
