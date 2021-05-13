@@ -1,5 +1,6 @@
 import 'package:algolia/algolia.dart';
 import 'package:flutter/material.dart';
+import 'package:proximity/app/align/align_page.dart';
 
 import '../animated_switcher/animated_switcher.dart';
 import '../customized_widgets/list_tile_card.dart';
@@ -113,6 +114,10 @@ class _AlgoliaPageState extends State<AlgoliaPage> {
 
   Widget retrieveWidget(String widgetName) {
     switch (widgetName) {
+      case 'Align':
+        {
+          return AlignPage();
+        }
       case 'FractionallySizedBox':
         {
           return FractionallySizedBoxPage();

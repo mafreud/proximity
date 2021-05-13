@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:proximity/app/align/align_page.dart';
 
 import '../algolia/algolia_page.dart';
 import '../animated_switcher/animated_switcher.dart';
@@ -48,6 +49,14 @@ class HomePage extends ConsumerWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            ListTileCard(
+              page: AlignPage(),
+              title: 'Align',
+              text:
+                  'A widget that aligns its child within itself and optionally sizes itself based on the child\'s size.',
+              chipList: ['null safety', 'video', 'widget'],
+              gif: 'assets/gif/align.gif',
+            ),
             ListTileCard(
               page: FractionallySizedBoxPage(),
               title: 'FractionallySizedBox',
