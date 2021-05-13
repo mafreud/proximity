@@ -2,8 +2,8 @@
 
 Flutter widgets you haven't used yet.
 
-<a href='https://play.google.com/store/apps/details?id=com.flutterproximity&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://user-images.githubusercontent.com/28733986/116828704-52300b80-abdb-11eb-8c7a-ac6af4596641.png'  height="110"/></a>
-<a href='https://apps.apple.com/us/app/futter-proximity/id1565428569'><img alt='Download on the App Store' src='https://user-images.githubusercontent.com/28733986/116828669-185f0500-abdb-11eb-95e3-c2eea824113a.png'  height="110"/></a>
+<a href='https://play.google.com/store/apps/details?id=com.flutterproximity&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://user-images.githubusercontent.com/28733986/116828704-52300b80-abdb-11eb-8c7a-ac6af4596641.png'  height="80"/></a>
+<a href='https://apps.apple.com/us/app/futter-proximity/id1565428569'><img alt='Download on the App Store' src='https://user-images.githubusercontent.com/28733986/116828669-185f0500-abdb-11eb-95e3-c2eea824113a.png'  height="80"/></a>
 
 ## Problems that proximity solves
 
