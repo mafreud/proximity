@@ -54,11 +54,13 @@ class HomePage extends ConsumerWidget {
                 : SizedBox(),
           ],
         ),
-        // TODO(aoki): algoliaセクションはiosのみで表示
         body: ListView.builder(
             itemCount: dataList.length,
             itemBuilder: (context, index) {
               final widgetData = dataList[index];
+              if (widgetData.name == 'Algolia' && Platform.isAndroid) {
+                return SizedBox();
+              }
               return ListTileCard(
                 page: AlgoliaSearchIndex.retrieveWidget(widgetData.name),
                 title: widgetData.name,
