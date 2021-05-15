@@ -1,0 +1,222 @@
+import 'dart:convert';
+
+import 'package:flutter/material.dart';
+
+import 'package:proximity/app/align/align_page.dart';
+import 'package:proximity/app/animated_switcher/animated_switcher.dart';
+import 'package:proximity/app/expansion_panel/expansion_panel_page.dart';
+import 'package:proximity/app/fractionally_sized_box/fractionally_sized_box.dart';
+import 'package:proximity/app/indexed_stack/indexed_stack_page.dart';
+import 'package:proximity/app/physical_model/physical_model.dart';
+import 'package:proximity/app/rotated_box/rotated_box.dart';
+import 'package:proximity/app/scrollbar/scrollbar_page.dart';
+import 'package:proximity/app/search_delegate/search_delegate_page.dart';
+import 'package:proximity/app/sliver/sliver_app_bar_page.dart';
+import 'package:proximity/app/sliver/sliver_list_and_sliver_grid_view_page.dart';
+import 'package:proximity/app/sliver/sliver_page.dart';
+import 'package:proximity/app/switch_list_tile/switch_list_tile_page.dart';
+import 'package:proximity/app/table/table_page.dart';
+
+import 'algolia_page.dart';
+
+class AlgoliaSearchIndex {
+  final String name;
+  final String description;
+  final List<String> tag;
+  final String gif;
+
+  AlgoliaSearchIndex(this.name, this.description, this.tag, this.gif);
+
+  Map<String, dynamic> toMap() {
+    return {
+      'name': name,
+      'description': description,
+      'tag': tag,
+      'gif': gif,
+    };
+  }
+
+  factory AlgoliaSearchIndex.fromMap(Map<String, dynamic> map) {
+    return AlgoliaSearchIndex(
+      map['name'],
+      map['description'],
+      List<String>.from(map['tag']),
+      map['gif'],
+    );
+  }
+
+  String toJson() => json.encode(toMap());
+
+  static Widget retrieveWidget(String widgetName) {
+    switch (widgetName) {
+      case 'Align':
+        {
+          return AlignPage();
+        }
+      case 'FractionallySizedBox':
+        {
+          return FractionallySizedBoxPage();
+        }
+      case 'IndexedStack':
+        {
+          return IndexedStackPage();
+        }
+      case 'Sliver':
+        {
+          return SliverPage();
+        }
+      case 'SliverAppBar':
+        {
+          return SliverAppBarPage();
+        }
+      case 'SliverListAndSliverGridView':
+        {
+          return SliverListAndSliverGridViewPage();
+        }
+      case 'Algolia':
+        {
+          return AlgoliaPage();
+        }
+      case 'Search':
+        {
+          return SearchDelegatePage();
+        }
+      case 'Table':
+        {
+          return TablePage();
+        }
+      case 'SwitchListTile':
+        {
+          return SwitchListTilePage();
+        }
+      case 'AnimatedSwitcher':
+        {
+          return AnimatedSwitcherPage();
+        }
+
+      case 'RotatedBox':
+        {
+          return RotatedBoxPage();
+        }
+      case 'Scrollbar':
+        {
+          return ScrollbarPage();
+        }
+      case 'ExpansionPanel':
+        {
+          return ExpansionPanelPage();
+        }
+      case 'PhysicalModel':
+        {
+          return PhysicalModelPage();
+        }
+      default:
+        return AlgoliaPage();
+    }
+  }
+}
+
+class AlgoliaIndex {
+  static final index = [
+    {
+      'name': 'Align',
+      'description':
+          'A widget that aligns its child within itself and optionally sizes itself based on the child\'s size.',
+      'tag': ['null safety', 'widget', 'video'],
+      'gif': 'assets/gif/align.gif'
+    },
+    {
+      'name': 'FractionallySizedBox',
+      'description':
+          'A widget that sizes its child to a fraction of the total available space.',
+      'tag': ['null safety', 'widget', 'video'],
+      'gif': 'assets/gif/fractionally_sized_box.gif'
+    },
+    {
+      'name': 'IndexedStack',
+      'description':
+          'A Stack that shows a single child from a list of children.',
+      "tag": ["null safety", "widget", "video"],
+      "gif": "assets/gif/indexed_stack.gif"
+    },
+    {
+      "name": "Sliver",
+      "description":
+          "A sliver is a portion of a scrollable area that you can define to behave in a special way.",
+      "tag": ["null safety", "widget", "video"],
+      "gif": "assets/gif/sliver_app_bar.gif"
+    },
+    {
+      "name": "SliverAppBar",
+      "description":
+          "A material design app bar that integrates with a CustomScrollView.",
+      "tag": ["null safety", "widget", "video"],
+      "gif": "assets/gif/sliver_app_bar.gif"
+    },
+    {
+      "name": "SliverListAndSliverGridView",
+      "description":
+          "A sliver that places multiple box children in a two dimensional arrangement. A sliver that places multiple box children in a linear array along the main axis.",
+      "tag": ["null safety", "widget", "video"],
+      "gif": "assets/gif/sliver_list_and_sliver_grid_view.gif"
+    },
+    {
+      "name": "Algolia",
+      "description": "full-text search, typo tolerant",
+      "tag": ["null safety", "plugin"],
+      "gif": "assets/gif/algolia.gif"
+    },
+    {
+      "name": "Search",
+      "description": "Text search in Flutter",
+      "tag": ["null safety", "video"],
+      "gif": "assets/gif/search_delegate.gif"
+    },
+    {
+      "name": "Table",
+      "description":
+          "A widget that uses the table layout algorithm for its children.",
+      "tag": ["null safety", "video", "widget"],
+      "gif": "assets/gif/table.gif"
+    },
+    {
+      "name": "SwitchListTile",
+      "description":
+          "A ListTile with a Switch. In other words, a switch with a label.",
+      "tag": ["null safety", "video", "widget"],
+      "gif": "assets/gif/switch_list_tile.gif"
+    },
+    {
+      "name": "AnimatedSwitcher",
+      "description": "Animated cross-fade between 2 widgets.",
+      "tag": ["null safety", "video", "widget"],
+      "gif": "assets/gif/animated_switcher.gif"
+    },
+    {
+      "name": "RotatedBox",
+      "description":
+          "A widget that rotates its child by a integral number of quarter turns.",
+      "tag": ["null safety", "video", "widget"],
+      "gif": "assets/gif/rotated_box.gif"
+    },
+    {
+      "name": "Scrollbar",
+      "description": "A Material Design scrollbar.",
+      "tag": ["null safety", "video", "widget"],
+      "gif": "assets/gif/scrollbar.gif"
+    },
+    {
+      "name": "ExpansionPanel",
+      "description": "A material expansion panel.",
+      "tag": ["null safety", "video", "widget"],
+      "gif": "assets/gif/expansion_panel.gif"
+    },
+    {
+      "name": "PhysicalModel",
+      "description":
+          "A widget representing a physical layer that clips its children to a shape.",
+      "tag": ["null safety", "video", "widget"],
+      "gif": "assets/gif/physical_model.gif"
+    }
+  ];
+}
