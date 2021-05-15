@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:proximity/app/align/align_page.dart';
 import 'package:proximity/app/animated_switcher/animated_switcher.dart';
 import 'package:proximity/app/expansion_panel/expansion_panel_page.dart';
+import 'package:proximity/app/flexible/flexible_page.dart';
 import 'package:proximity/app/fractionally_sized_box/fractionally_sized_box.dart';
 import 'package:proximity/app/indexed_stack/indexed_stack_page.dart';
 import 'package:proximity/app/physical_model/physical_model.dart';
@@ -49,6 +50,10 @@ class AlgoliaSearchIndex {
 
   static Widget retrieveWidget(String widgetName) {
     switch (widgetName) {
+      case 'Flexible':
+        {
+          return FlexiblePage();
+        }
       case 'Align':
         {
           return AlignPage();
@@ -118,6 +123,13 @@ class AlgoliaSearchIndex {
 
 class AlgoliaIndex {
   static final index = [
+    {
+      'name': 'Flexible',
+      'description':
+          'A widget that controls how a child of a Row, Column, or Flex flexes.',
+      'tag': ['null safety', 'widget', 'video'],
+      'gif': 'assets/gif/flexible.gif'
+    },
     {
       'name': 'Align',
       'description':
