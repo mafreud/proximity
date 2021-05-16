@@ -2,22 +2,22 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
-import 'package:proximity/app/align/align_page.dart';
-import 'package:proximity/app/animated_switcher/animated_switcher.dart';
-import 'package:proximity/app/expansion_panel/expansion_panel_page.dart';
-import 'package:proximity/app/flexible/flexible_page.dart';
-import 'package:proximity/app/fractionally_sized_box/fractionally_sized_box.dart';
-import 'package:proximity/app/indexed_stack/indexed_stack_page.dart';
-import 'package:proximity/app/physical_model/physical_model.dart';
-import 'package:proximity/app/rotated_box/rotated_box.dart';
-import 'package:proximity/app/scrollbar/scrollbar_page.dart';
-import 'package:proximity/app/search_delegate/search_delegate_page.dart';
-import 'package:proximity/app/sliver/sliver_app_bar_page.dart';
-import 'package:proximity/app/sliver/sliver_list_and_sliver_grid_view_page.dart';
-import 'package:proximity/app/sliver/sliver_page.dart';
-import 'package:proximity/app/switch_list_tile/switch_list_tile_page.dart';
-import 'package:proximity/app/table/table_page.dart';
-
+import '../align/align_page.dart';
+import '../animated_switcher/animated_switcher.dart';
+import '../expanded/expanded_page.dart';
+import '../expansion_panel/expansion_panel_page.dart';
+import '../flexible/flexible_page.dart';
+import '../fractionally_sized_box/fractionally_sized_box.dart';
+import '../indexed_stack/indexed_stack_page.dart';
+import '../physical_model/physical_model.dart';
+import '../rotated_box/rotated_box.dart';
+import '../scrollbar/scrollbar_page.dart';
+import '../search_delegate/search_delegate_page.dart';
+import '../sliver/sliver_app_bar_page.dart';
+import '../sliver/sliver_list_and_sliver_grid_view_page.dart';
+import '../sliver/sliver_page.dart';
+import '../switch_list_tile/switch_list_tile_page.dart';
+import '../table/table_page.dart';
 import 'algolia_page.dart';
 
 class AlgoliaSearchIndex {
@@ -50,6 +50,10 @@ class AlgoliaSearchIndex {
 
   static Widget retrieveWidget(String widgetName) {
     switch (widgetName) {
+      case 'Expanded':
+        {
+          return ExpandedPage();
+        }
       case 'Flexible':
         {
           return FlexiblePage();
@@ -123,6 +127,13 @@ class AlgoliaSearchIndex {
 
 class AlgoliaIndex {
   static final index = [
+    {
+      'name': 'Expanded',
+      'description':
+          'A widget that expands a child of a Row, Column, or Flex so that the child fills the available space.',
+      'tag': ['null safety', 'widget', 'video'],
+      'gif': 'assets/gif/expanded.gif'
+    },
     {
       'name': 'Flexible',
       'description':
