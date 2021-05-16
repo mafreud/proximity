@@ -130,9 +130,9 @@ class AlgoliaIndex {
     {
       'name': 'Expanded',
       'description':
-          'A widget that controls how a child of a Row, Column, or Flex flexes.',
+          'A widget that expands a child of a Row, Column, or Flex so that the child fills the available space.',
       'tag': ['null safety', 'widget', 'video'],
-      'gif': 'assets/gif/flexible.gif'
+      'gif': 'assets/gif/expanded.gif'
     },
     {
       'name': 'Flexible',
