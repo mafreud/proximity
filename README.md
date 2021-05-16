@@ -13,7 +13,7 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 ## Gif
 
-![55dbc10639d0f23b9cf7c0e7d8c6765e](https://user-images.githubusercontent.com/28733986/116259353-b05e8800-a7b0-11eb-8a50-a1cb05ebcb39.gif)
+![55dbc10639d0f23b9cf7c0e7d8c6765e](https://user-images.githubusercontent.com/28733986/118405733-09388680-b6b4-11eb-9a80-71457aecb5ed.gif)
 
 ## Widgets that you can touch and feel
 
