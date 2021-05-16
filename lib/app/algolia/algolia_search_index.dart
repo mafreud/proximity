@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:proximity/app/animated_positioned/animated_positioned_page.dart';
 import 'package:proximity/app/reorderable_list_view/reorderable_list_view_page.dart';
 import 'package:proximity/app/slider/slider_page.dart';
 
@@ -52,6 +53,10 @@ class AlgoliaSearchIndex {
 
   static Widget retrieveWidget(String widgetName) {
     switch (widgetName) {
+      case 'AnimatedPositioned':
+        {
+          return AnimatedPositionedPage();
+        }
       case 'ReorderableListView':
         {
           return ReorderableListViewPage();
@@ -137,6 +142,13 @@ class AlgoliaSearchIndex {
 
 class AlgoliaIndex {
   static final index = [
+    {
+      'name': 'AnimatedPositioned',
+      'description':
+          'Animated version of Positioned which automatically transitions the child\'s position over a given duration whenever the given position changes.',
+      'tag': ['null safety', 'widget', 'video'],
+      'gif': 'assets/gif/animated_positioned.gif'
+    },
     {
       'name': 'ReorderableListView',
       'description':
