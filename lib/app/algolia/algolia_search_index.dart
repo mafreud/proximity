@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:proximity/app/slider/slider_page.dart';
 
 import '../align/align_page.dart';
 import '../animated_switcher/animated_switcher.dart';
@@ -50,6 +51,10 @@ class AlgoliaSearchIndex {
 
   static Widget retrieveWidget(String widgetName) {
     switch (widgetName) {
+      case 'Slider':
+        {
+          return SliderPage();
+        }
       case 'Expanded':
         {
           return ExpandedPage();
@@ -127,6 +132,12 @@ class AlgoliaSearchIndex {
 
 class AlgoliaIndex {
   static final index = [
+    {
+      'name': 'Slider',
+      'description': 'A Material Design slider.',
+      'tag': ['null safety', 'widget', 'video'],
+      'gif': 'assets/gif/slider.gif'
+    },
     {
       'name': 'Expanded',
       'description':
