@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:proximity/app/reorderable_list_view/reorderable_list_view_page.dart';
 import 'package:proximity/app/slider/slider_page.dart';
 
 import '../align/align_page.dart';
@@ -51,6 +52,10 @@ class AlgoliaSearchIndex {
 
   static Widget retrieveWidget(String widgetName) {
     switch (widgetName) {
+      case 'ReorderableListView':
+        {
+          return ReorderableListViewPage();
+        }
       case 'Slider':
         {
           return SliderPage();
@@ -132,6 +137,13 @@ class AlgoliaSearchIndex {
 
 class AlgoliaIndex {
   static final index = [
+    {
+      'name': 'ReorderableListView',
+      'description':
+          'A list whose items the user can interactively reorder by dragging.',
+      'tag': ['null safety', 'widget', 'video'],
+      'gif': 'assets/gif/reorderable_list_view.gif'
+    },
     {
       'name': 'Slider',
       'description': 'A Material Design slider.',
