@@ -15,6 +15,11 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 ![55dbc10639d0f23b9cf7c0e7d8c6765e](https://user-images.githubusercontent.com/28733986/118405733-09388680-b6b4-11eb-9a80-71457aecb5ed.gif)
 
+## Powerful search by Algolia
+
+![2db5b746b41a8b73188f3d9a7d907941](https://user-images.githubusercontent.com/28733986/118405826-91b72700-b6b4-11eb-8be1-9986d3771f0c.gif)
+
+
 ## Widgets that you can touch and feel
 
 - AnimatedPositioned ✨
