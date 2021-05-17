@@ -7,11 +7,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String documentUrl;
   final String videoUrl;
   final AppBar appBar = AppBar();
+  final bool isVideoAvailable;
 
   CustomAppBar({
     required this.title,
     required this.documentUrl,
-    required this.videoUrl,
+    this.videoUrl = '',
+    this.isVideoAvailable = false,
   });
 
   @override
@@ -19,14 +21,16 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Text(title),
       actions: [
-        IconButton(
-            icon: Icon(
-              FontAwesomeIcons.youtube,
-              color: Colors.red,
-            ),
-            onPressed: () {
-              _launchURL(videoUrl);
-            }),
+        isVideoAvailable
+            ? IconButton(
+                icon: Icon(
+                  FontAwesomeIcons.youtube,
+                  color: Colors.red,
+                ),
+                onPressed: () {
+                  _launchURL(videoUrl);
+                })
+            : SizedBox(),
         IconButton(
           icon: Icon(
             FontAwesomeIcons.bookOpen,
@@ -34,7 +38,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           onPressed: () {
             _launchURL(documentUrl);
           },
-        ),
+        )
       ],
     );
   }
