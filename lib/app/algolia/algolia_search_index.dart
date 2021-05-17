@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:proximity/app/animated_align/animated_align_page.dart';
 import 'package:proximity/app/animated_positioned/animated_positioned_page.dart';
 import 'package:proximity/app/reorderable_list_view/reorderable_list_view_page.dart';
 import 'package:proximity/app/slider/slider_page.dart';
@@ -53,6 +54,10 @@ class AlgoliaSearchIndex {
 
   static Widget retrieveWidget(String widgetName) {
     switch (widgetName) {
+      case 'AnimatedAlign':
+        {
+          return AnimatedAlignPage();
+        }
       case 'AnimatedPositioned':
         {
           return AnimatedPositionedPage();
@@ -142,6 +147,13 @@ class AlgoliaSearchIndex {
 
 class AlgoliaIndex {
   static final index = [
+    {
+      'name': 'AnimatedAlign',
+      'description':
+          'Animated version of Align which automatically transitions the child\'s position over a given duration whenever the given alignment changes.',
+      'tag': ['null safety', 'widget'],
+      'gif': 'assets/gif/animated_align.gif'
+    },
     {
       'name': 'AnimatedPositioned',
       'description':

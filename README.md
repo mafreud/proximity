@@ -19,14 +19,14 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 ![2db5b746b41a8b73188f3d9a7d907941](https://user-images.githubusercontent.com/28733986/118405826-91b72700-b6b4-11eb-8be1-9986d3771f0c.gif)
 
-
 ## Widgets that you can touch and feel
 
-- AnimatedPositioned ✨
-- ReorderableListView ✨
-- Slider ✨
-- Expanded ✨
-- Flexible ✨
+- AnimatedAlign ✨
+- AnimatedPositioned
+- ReorderableListView
+- Slider
+- Expanded
+- Flexible
 - Align
 - FCM(Push notification)
 - FractionallySizedBox
