@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:proximity/app/animated_align/animated_align_page.dart';
+import 'package:proximity/app/animated_container/animated_container_page.dart';
 import 'package:proximity/app/animated_positioned/animated_positioned_page.dart';
 import 'package:proximity/app/reorderable_list_view/reorderable_list_view_page.dart';
 import 'package:proximity/app/slider/slider_page.dart';
@@ -54,6 +55,10 @@ class AlgoliaSearchIndex {
 
   static Widget retrieveWidget(String widgetName) {
     switch (widgetName) {
+      case 'AnimatedContainer':
+        {
+          return AnimatedContainerPage();
+        }
       case 'AnimatedAlign':
         {
           return AnimatedAlignPage();
@@ -147,6 +152,13 @@ class AlgoliaSearchIndex {
 
 class AlgoliaIndex {
   static final index = [
+    {
+      'name': 'AnimatedContainer',
+      'description':
+          'Animated version of Container that gradually changes its values over a period of time.',
+      'tag': ['null safety', 'widget', 'video'],
+      'gif': 'assets/gif/animated_container.gif'
+    },
     {
       'name': 'AnimatedAlign',
       'description':
