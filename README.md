@@ -66,3 +66,24 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 - adobe_xd
 - flutter_slidable
 - flutter_chat_ui
+
+## For contributors
+### How to setting firebase project for build and run
+1. Add Firebase to your iOS project and place "GoogleService-Info.plist"
+
+    See: https://firebase.google.com/docs/ios/setup
+1. Setup Anonymous Authentication of Firebase Authentication
+
+    1. In the Firebase console, open the Auth section.
+    1. On the Sign-in Methods page, enable the Anonymous sign-in method.
+
+1. Run Proximity project and execute app
+
+  Okay, you have already completed for setting to build and run application.
+
+  Execute this command in your terminal and execute application in your emulator.
+  ```
+  $ open -a simulator
+  $ flutter run
+  ```
+  
