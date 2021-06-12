@@ -9,6 +9,7 @@ import 'package:proximity/app/flutter_progress_hud/flutter_progress_hud_page.dar
 import 'package:proximity/app/reorderable_list_view/reorderable_list_view_page.dart';
 import 'package:proximity/app/show_modal_bottom_sheet/show_modal_bottom_sheet.dart';
 import 'package:proximity/app/slider/slider_page.dart';
+import 'package:proximity/app/url_launcher/url_launcher_page.dart';
 
 import '../align/align_page.dart';
 import '../animated_switcher/animated_switcher.dart';
@@ -58,6 +59,10 @@ class AlgoliaSearchIndex {
 
   static Widget retrieveWidget(String widgetName) {
     switch (widgetName) {
+      case 'UrlLauncher':
+        {
+          return UrlLauncherPage();
+        }
       case 'FlutterProgressHud':
         {
           return FlutterProgressHudPage();
@@ -166,6 +171,16 @@ class AlgoliaSearchIndex {
 
 class AlgoliaIndex {
   static final index = [
+    {
+      'name': 'UrlLauncher',
+      'description':
+          'A Flutter plugin for launching a URL. Supports iOS, Android, web, Windows, macOS, and Linux.',
+      'tag': [
+        'null safety',
+        'package',
+      ],
+      'gif': 'assets/gif/url_launcher.gif'
+    },
     {
       'name': 'FlutterProgressHud',
       'description':

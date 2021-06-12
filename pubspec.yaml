@@ -18,7 +18,7 @@ dependencies:
   font_awesome_flutter: ^9.0.0
   pedantic: ^1.11.0
   algolia: ^1.0.1
-  url_launcher: ^6.0.3
+  url_launcher: ^6.0.6
 
   firebase_analytics: ^8.0.3
   firebase_core: ^1.1.0
