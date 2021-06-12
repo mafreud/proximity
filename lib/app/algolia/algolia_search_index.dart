@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:proximity/app/animated_align/animated_align_page.dart';
 import 'package:proximity/app/animated_container/animated_container_page.dart';
 import 'package:proximity/app/animated_positioned/animated_positioned_page.dart';
+import 'package:proximity/app/autocomplete_core/autocomplete_core_page.dart';
 import 'package:proximity/app/reorderable_list_view/reorderable_list_view_page.dart';
 import 'package:proximity/app/slider/slider_page.dart';
 
@@ -143,6 +144,10 @@ class AlgoliaSearchIndex {
       case 'PhysicalModel':
         {
           return PhysicalModelPage();
+        }
+      case 'AutocompleteCore':
+        {
+          return AutocompleteCorePage();
         }
       default:
         return AlgoliaPage();
@@ -299,6 +304,13 @@ class AlgoliaIndex {
           'A widget representing a physical layer that clips its children to a shape.',
       'tag': ['null safety', 'video', 'widget'],
       'gif': 'assets/gif/physical_model.gif'
+    },
+    {
+      'name': 'AutocompleteCore',
+      'description':
+          'A widget, Autocomplete, that allows the user to select one option among many',
+      'tag': ['null safety', 'widget'],
+      'gif': 'assets/gif/autocomplete.gif'
     }
   ];
 }
