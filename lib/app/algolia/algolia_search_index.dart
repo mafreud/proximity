@@ -71,6 +71,10 @@ class AlgoliaSearchIndex {
         {
           return ShowModalBottomSheetPage();
         }
+      case 'AutocompleteCore':
+        {
+          return AutocompleteCorePage();
+        }
       case 'AnimatedContainer':
         {
           return AnimatedContainerPage();
@@ -159,10 +163,6 @@ class AlgoliaSearchIndex {
         {
           return PhysicalModelPage();
         }
-      case 'AutocompleteCore':
-        {
-          return AutocompleteCorePage();
-        }
       default:
         return AlgoliaPage();
     }
@@ -199,6 +199,13 @@ class AlgoliaIndex {
         'widget',
       ],
       'gif': 'assets/gif/show_modal_bottom_sheet.gif'
+    },
+    {
+      'name': 'AutocompleteCore',
+      'description':
+          'A widget, Autocomplete, that allows the user to select one option among many',
+      'tag': ['null safety', 'widget'],
+      'gif': 'assets/gif/autocomplete.gif'
     },
     {
       'name': 'AnimatedContainer',
@@ -348,12 +355,5 @@ class AlgoliaIndex {
       'tag': ['null safety', 'video', 'widget'],
       'gif': 'assets/gif/physical_model.gif'
     },
-    {
-      'name': 'AutocompleteCore',
-      'description':
-          'A widget, Autocomplete, that allows the user to select one option among many',
-      'tag': ['null safety', 'widget'],
-      'gif': 'assets/gif/autocomplete.gif'
-    }
   ];
 }
