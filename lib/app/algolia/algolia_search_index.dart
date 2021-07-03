@@ -7,6 +7,7 @@ import 'package:proximity/app/animated_positioned/animated_positioned_page.dart'
 import 'package:proximity/app/autocomplete_core/autocomplete_core_page.dart';
 import 'package:proximity/app/device_info_plus/device_info_plus_page.dart';
 import 'package:proximity/app/flutter_progress_hud/flutter_progress_hud_page.dart';
+import 'package:proximity/app/package_info_plus/package_info_plus_page.dart';
 import 'package:proximity/app/reorderable_list_view/reorderable_list_view_page.dart';
 import 'package:proximity/app/show_modal_bottom_sheet/show_modal_bottom_sheet.dart';
 import 'package:proximity/app/slider/slider_page.dart';
@@ -60,6 +61,10 @@ class AlgoliaSearchIndex {
 
   static Widget retrieveWidget(String widgetName) {
     switch (widgetName) {
+      case 'PackageInfoPlus':
+        {
+          return PackageInfoPlusPage();
+        }
       case 'DeviceInfoPlus':
         {
           return DeviceInfoPlusPage();
@@ -176,6 +181,16 @@ class AlgoliaSearchIndex {
 
 class AlgoliaIndex {
   static final index = [
+    {
+      'name': 'PackageInfoPlus',
+      'description':
+          'This Flutter plugin provides an API for querying information about an application package.',
+      'tag': [
+        'null safety',
+        'package',
+      ],
+      'gif': 'assets/gif/package_info_plus.gif'
+    },
     {
       'name': 'DeviceInfoPlus',
       'description':
