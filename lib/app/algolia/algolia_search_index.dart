@@ -5,6 +5,7 @@ import 'package:proximity/app/animated_align/animated_align_page.dart';
 import 'package:proximity/app/animated_container/animated_container_page.dart';
 import 'package:proximity/app/animated_positioned/animated_positioned_page.dart';
 import 'package:proximity/app/autocomplete_core/autocomplete_core_page.dart';
+import 'package:proximity/app/device_info_plus/device_info_plus_page.dart';
 import 'package:proximity/app/flutter_progress_hud/flutter_progress_hud_page.dart';
 import 'package:proximity/app/reorderable_list_view/reorderable_list_view_page.dart';
 import 'package:proximity/app/show_modal_bottom_sheet/show_modal_bottom_sheet.dart';
@@ -59,6 +60,10 @@ class AlgoliaSearchIndex {
 
   static Widget retrieveWidget(String widgetName) {
     switch (widgetName) {
+      case 'DeviceInfoPlus':
+        {
+          return DeviceInfoPlusPage();
+        }
       case 'UrlLauncher':
         {
           return UrlLauncherPage();
@@ -171,6 +176,16 @@ class AlgoliaSearchIndex {
 
 class AlgoliaIndex {
   static final index = [
+    {
+      'name': 'DeviceInfoPlus',
+      'description':
+          'Get current device information from within the Flutter application.',
+      'tag': [
+        'null safety',
+        'package',
+      ],
+      'gif': 'assets/gif/device_info_plus.gif'
+    },
     {
       'name': 'UrlLauncher',
       'description':
