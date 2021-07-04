@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:proximity/app/animated_align/animated_align_page.dart';
 import 'package:proximity/app/animated_container/animated_container_page.dart';
+import 'package:proximity/app/animated_padding/animated_padding.dart';
 import 'package:proximity/app/animated_positioned/animated_positioned_page.dart';
 import 'package:proximity/app/autocomplete_core/autocomplete_core_page.dart';
 import 'package:proximity/app/device_info_plus/device_info_plus_page.dart';
@@ -61,6 +62,10 @@ class AlgoliaSearchIndex {
 
   static Widget retrieveWidget(String widgetName) {
     switch (widgetName) {
+      case 'AnimatedPadding':
+        {
+          return AnimatedPaddingPage();
+        }
       case 'PackageInfoPlus':
         {
           return PackageInfoPlusPage();
@@ -182,13 +187,17 @@ class AlgoliaSearchIndex {
 class AlgoliaIndex {
   static final index = [
     {
+      'name': 'AnimatedPadding',
+      'description':
+          'Animated version of Padding which automatically transitions the indentation over a given duration whenever the given inset changes.',
+      'tag': ['null safety', 'package', 'video'],
+      'gif': 'assets/gif/animated_padding.gif'
+    },
+    {
       'name': 'PackageInfoPlus',
       'description':
           'This Flutter plugin provides an API for querying information about an application package.',
-      'tag': [
-        'null safety',
-        'package',
-      ],
+      'tag': ['null safety', 'package'],
       'gif': 'assets/gif/package_info_plus.gif'
     },
     {
