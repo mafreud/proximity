@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import 'package:proximity/constants/proximity_colors.dart';
 
 import '../customized_widgets/custom_app_bar.dart';
 
@@ -14,6 +15,7 @@ class PackageInfoPlusPage extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
+          style: ElevatedButton.styleFrom(primary: ProximityColors.flutterBlue),
           onPressed: () async {
             await _showDialog(context, await PackageInfo.fromPlatform());
           },

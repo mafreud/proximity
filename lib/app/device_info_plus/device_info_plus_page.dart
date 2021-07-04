@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:proximity/app/customized_widgets/custom_app_bar.dart';
+import 'package:proximity/constants/proximity_colors.dart';
 
 class DeviceInfoPlusPage extends StatelessWidget {
   const DeviceInfoPlusPage({Key? key}) : super(key: key);
@@ -17,6 +18,7 @@ class DeviceInfoPlusPage extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
+          style: ElevatedButton.styleFrom(primary: ProximityColors.flutterBlue),
           onPressed: () async {
             final deviceInfo = DeviceInfoPlugin();
             if (Platform.isAndroid) {

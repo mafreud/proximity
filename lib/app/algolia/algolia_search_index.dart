@@ -9,6 +9,7 @@ import 'package:proximity/app/autocomplete_core/autocomplete_core_page.dart';
 import 'package:proximity/app/device_info_plus/device_info_plus_page.dart';
 import 'package:proximity/app/flutter_progress_hud/flutter_progress_hud_page.dart';
 import 'package:proximity/app/package_info_plus/package_info_plus_page.dart';
+import 'package:proximity/app/radio_list_tile/radio_list_tile.dart';
 import 'package:proximity/app/reorderable_list_view/reorderable_list_view_page.dart';
 import 'package:proximity/app/show_modal_bottom_sheet/show_modal_bottom_sheet.dart';
 import 'package:proximity/app/slider/slider_page.dart';
@@ -65,6 +66,10 @@ class AlgoliaSearchIndex {
       case 'AnimatedPadding':
         {
           return AnimatedPaddingPage();
+        }
+      case 'RadioListTile':
+        {
+          return RadioListTilePage();
         }
       case 'PackageInfoPlus':
         {
@@ -192,6 +197,16 @@ class AlgoliaIndex {
           'Animated version of Padding which automatically transitions the indentation over a given duration whenever the given inset changes.',
       'tag': ['null safety', 'package', 'video'],
       'gif': 'assets/gif/animated_padding.gif'
+    },
+    {
+      'name': 'RadioListTile',
+      'description':
+          'A ListTile with a Radio. In other words, a radio button with a label.',
+      'tag': [
+        'null safety',
+        'widget',
+      ],
+      'gif': 'assets/gif/radio_list_tile.gif'
     },
     {
       'name': 'PackageInfoPlus',

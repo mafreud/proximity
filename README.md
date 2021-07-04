@@ -21,6 +21,10 @@ Proximity solves this problem. It enables users to touch and feel widgets so tha
 
 ## Widgets that you can touch and feel
 
+- animated_padding ✨
+- radio_list_tile ✨
+- package_info_plus ✨
+- device_info_plus ✨
 - url_launcher ✨
 - flutter_progress_hud ✨
 - showModalBottomSheet ✨

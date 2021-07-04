@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:proximity/app/customized_widgets/custom_app_bar.dart';
+import 'package:proximity/constants/proximity_colors.dart';
 
 class AnimatedPaddingPage extends StatefulWidget {
   @override
@@ -27,23 +28,35 @@ class _AnimatedPaddingPageState extends State<AnimatedPaddingPage> {
         isVideoAvailable: true,
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          AnimatedPadding(
-            padding: EdgeInsets.all(padValue),
-            duration: const Duration(seconds: 2),
-            curve: Curves.easeInOut,
+          Align(
+            alignment: Alignment.center,
             child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 5,
-              color: Colors.blue,
+              decoration: BoxDecoration(
+                border: Border.all(color: ProximityColors.primaryBlue),
+              ),
+              height: MediaQuery.of(context).size.width * 0.5,
+              width: MediaQuery.of(context).size.width * 0.9,
+              child: AnimatedPadding(
+                padding: EdgeInsets.symmetric(horizontal: padValue),
+                duration: const Duration(seconds: 1),
+                curve: Curves.easeInOut,
+                child: Container(color: ProximityColors.primaryBlue),
+              ),
             ),
           ),
+          SizedBox(height: 20),
           Text('Padding: $padValue'),
           ElevatedButton(
-              child: const Text('Change padding'),
-              onPressed: () {
-                _updatePadding(padValue == 0.0 ? 100.0 : 0.0);
-              }),
+            style:
+                ElevatedButton.styleFrom(primary: ProximityColors.primaryBlue),
+            onPressed: () {
+              _updatePadding(padValue == 0.0 ? 80.0 : 0.0);
+            },
+            child: const Text('Change padding'),
+          ),
         ],
       ),
     );
