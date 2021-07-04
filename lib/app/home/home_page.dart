@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../algolia/algolia_page.dart';
 import '../algolia/algolia_search_index.dart';
@@ -30,12 +32,18 @@ class HomePage extends ConsumerWidget {
               }),
           actions: [
             IconButton(
+              icon: Icon(FontAwesomeIcons.github),
+              onPressed: () {
+                _launchURL('https://github.com/mafreud/proximity');
+              },
+            ),
+            IconButton(
               icon: Icon(Icons.search),
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => AlgoliaPage()));
               },
-            )
+            ),
           ],
         ),
         body: Scrollbar(
@@ -53,4 +61,8 @@ class HomePage extends ConsumerWidget {
               }),
         ));
   }
+
+  void _launchURL(String _url) async => await canLaunch(_url)
+      ? await launch(_url)
+      : throw 'Could not launch $_url';
 }
