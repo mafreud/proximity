@@ -33,6 +33,7 @@ import '../switch_list_tile/switch_list_tile_page.dart';
 import '../table/table_page.dart';
 import 'algolia_page.dart';
 import '../progress_indicator/circular_progress_indicator_page.dart';
+import '../progress_indicator/linear_progress_indicator_page.dart';
 
 class AlgoliaSearchIndex {
   final String name;
@@ -91,6 +92,10 @@ class AlgoliaSearchIndex {
       case 'CircularProgressIndicator':
         {
           return CircularProgressIndicatorPage();
+        }
+      case 'LinearProgressIndicator':
+        {
+          return LinearProgressIndicatorPage();
         }
       case 'showModalBottomSheet':
         {
@@ -253,11 +258,22 @@ class AlgoliaIndex {
     {
       'name': 'CircularProgressIndicator',
       'description':
+      //TODO: description変更
       'A widget that shows progress along a circle. There are two kinds of circular progress indicators.',
       'tag': [
         'null safety',
       ],
       'gif': 'assets/gif/circular_progress_indicator.gif'
+    },
+    {
+      'name': 'LinearProgressIndicator',
+      'description':
+      'A widget that shows progress along a line.',
+      'tag': [
+        'null safety',
+      ],
+      //TODO: gif作り
+      'gif': 'assets/gif/linear_progress_indicator.gif'
     },
     {
       'name': 'showModalBottomSheet',
