@@ -33,7 +33,9 @@ class _CircularProgressIndicatorPageState
               maintainState: true,
               maintainSize: true,
               maintainAnimation: true,
-              child: CircularProgressIndicator()
+              child: CircularProgressIndicator(
+                backgroundColor: Colors.grey,
+              )
             ),
             SizedBox(height: 32.0),
             ElevatedButton(

@@ -258,8 +258,7 @@ class AlgoliaIndex {
     {
       'name': 'CircularProgressIndicator',
       'description':
-      //TODO: description変更
-      'A widget that shows progress along a circle. There are two kinds of circular progress indicators.',
+      'A widget that shows progress along a circle.',
       'tag': [
         'null safety',
       ],
@@ -272,7 +271,6 @@ class AlgoliaIndex {
       'tag': [
         'null safety',
       ],
-      //TODO: gif作り
       'gif': 'assets/gif/linear_progress_indicator.gif'
     },
     {
